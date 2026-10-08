@@ -16,6 +16,7 @@ export interface LessonItem {
 export interface Lesson {
   id: number;
   title: string;
+  short?: string;             // short label for the climb stations (e.g. "Salvação")
   verses?: LessonVerse[];     // required verses - multiplier "lesson"
   challenge?: LessonVerse[];  // optional challenge verses - multiplier "challenge"
   items?: LessonItem[];
@@ -24,6 +25,7 @@ export interface Lesson {
 }
 
 export interface LessonsData {
+  graduation?: { label: string; date?: string };  // summit of the climb (e.g. Reunião de Reconhecimento)
   multipliers: { lesson: number; challenge: number };
   exam: { pointsPerGrade: number; maxGrade: number; passGrade: number; retakes: number };
   lessons: Lesson[];

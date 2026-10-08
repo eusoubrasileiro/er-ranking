@@ -215,7 +215,12 @@ The viewer's version toggle never changes points. The delta (up arrow) is `total
 `configs/royal-ambassadors/data/lessons.json` defines each lesson: required `verses`, optional `challenge`
 verses (each `{ ref, version }` with the notebook version), `items` (`{ id, label, points }`) and `exam`.
 Shared values: `multipliers` and `exam` (`pointsPerGrade` 5, `maxGrade` 10, `passGrade` 7, `retakes` 1).
-The `/manual` page shows each boy's progress per lesson.
+Each lesson also has `short` (station label); top-level `graduation` (`{ label, date: "YYYY-MM" }`) is the summit.
+
+**A Escalada** (`ClimbMountain.tsx`, compact on Ranking via `ClimbSection.tsx`, full on `/manual`): SVG mountain,
+one station per lesson. A boy's position = Σ over lessons of done parts ÷ parts, where parts = required verses +
+items + exam passed (grade ≥ 7); the challenge verse earns points but not progress. Logic lives in
+`src/lib/manualProgress.ts` (also used by the `/manual` grid).
 
 ### Hand-entered verse texts (`verse-texts.json`)
 The YouVersion key only serves NVI/NBV/BLT/ptNVI/O Livro. Texts for ARC, ARA, NAA and the printed Manual go in

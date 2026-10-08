@@ -1,31 +1,141 @@
 {
-  "multipliers": { "lesson": 2, "challenge": 3 },
-  "exam": { "pointsPerGrade": 5, "maxGrade": 10, "passGrade": 7, "retakes": 1 },
+  "graduation": {
+    "label": "Reunião de Reconhecimento",
+    "date": "2026-12"
+  },
+  "multipliers": {
+    "lesson": 2,
+    "challenge": 3
+  },
+  "exam": {
+    "pointsPerGrade": 5,
+    "maxGrade": 10,
+    "passGrade": 7,
+    "retakes": 1
+  },
   "lessons": [
     {
       "id": 1,
       "title": "Requisitos Mínimos",
-      "verses": [{ "ref": "2Co 5:20", "version": "Manual" }],
+      "short": "Requisitos",
+      "verses": [
+        {
+          "ref": "2Co 5:20",
+          "version": "Manual"
+        }
+      ],
       "challenge": [],
-      "items": [{ "id": "tema-compromisso-hino", "label": "Tema, Compromisso e Hino", "points": 55 }],
+      "items": [
+        {
+          "id": "tema-compromisso-hino",
+          "label": "Tema, Compromisso e Hino",
+          "points": 55
+        }
+      ],
       "exam": true
     },
     {
       "id": 2,
       "title": "O Plano de Salvação",
-      "verses": [{ "ref": "Rm 3:23", "version": "ARC" }, { "ref": "Jo 3:16", "version": "ARC" }],
-      "challenge": [{ "ref": "Mt 10:32-33", "version": "ARC" }],
+      "short": "Salvação",
+      "verses": [
+        {
+          "ref": "Rm 3:23",
+          "version": "ARC"
+        },
+        {
+          "ref": "Jo 3:16",
+          "version": "ARC"
+        }
+      ],
+      "challenge": [
+        {
+          "ref": "Mt 10:32-33",
+          "version": "ARC"
+        }
+      ],
       "items": [],
       "exam": true
     },
     {
       "id": 3,
       "title": "Declaração dos ER",
+      "short": "Declaração",
       "verses": [],
       "challenge": [],
       "items": [],
       "exam": true,
       "note": "Versículos a definir"
+    },
+    {
+      "id": 4,
+      "title": "Insígnia",
+      "short": "Insígnia",
+      "verses": [],
+      "challenge": [],
+      "items": [],
+      "exam": true,
+      "note": "Requisitos a definir"
+    },
+    {
+      "id": 5,
+      "title": "Regras nos Esportes",
+      "short": "Esportes",
+      "verses": [],
+      "challenge": [],
+      "items": [],
+      "exam": true,
+      "note": "Requisitos a definir"
+    },
+    {
+      "id": 6,
+      "title": "Movimento Moderno de Missões",
+      "short": "Missões",
+      "verses": [],
+      "challenge": [],
+      "items": [],
+      "exam": true,
+      "note": "Requisitos a definir"
+    },
+    {
+      "id": 7,
+      "title": "Serviço Real",
+      "short": "Serviço Real",
+      "verses": [],
+      "challenge": [],
+      "items": [],
+      "exam": true,
+      "note": "Requisitos a definir"
+    },
+    {
+      "id": 8,
+      "title": "Programas da Embaixada",
+      "short": "Programas",
+      "verses": [],
+      "challenge": [],
+      "items": [],
+      "exam": true,
+      "note": "Requisitos a definir"
+    },
+    {
+      "id": 9,
+      "title": "Atividades Especiais",
+      "short": "Atividades",
+      "verses": [],
+      "challenge": [],
+      "items": [],
+      "exam": true,
+      "note": "Requisitos a definir"
+    },
+    {
+      "id": 10,
+      "title": "Tempo de Serviço",
+      "short": "Tempo de Serviço",
+      "verses": [],
+      "challenge": [],
+      "items": [],
+      "exam": true,
+      "note": "Requisitos a definir"
     }
   ]
 }

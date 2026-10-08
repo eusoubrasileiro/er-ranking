@@ -1,14 +1,15 @@
+import { useState } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LoadingState } from '@/components/LoadingState';
 import { ErrorState } from '@/components/ErrorState';
 import { EmptyState } from '@/components/EmptyState';
 import { KindBadge, VersionBadge } from '@/components/VerseBadges';
+import { ClimbMountain } from '@/components/ClimbMountain';
+import { ClimbLegend } from '@/components/ClimbSection';
 import { useLeaderboardData, type Participant } from '@/hooks/useLeaderboardData';
-import type { Lesson, LessonVerse } from '@/hooks/useLessonsData';
-import { expandVerseRange } from '@/lib/verseUtils';
+import type { Lesson, LessonsData } from '@/hooks/useLessonsData';
 import {
-  getVerseRef,
   isVerseSuspended,
   scoreVerseRecord,
   getBestExamGrade,
@@ -16,20 +17,60 @@ import {
   isLessonItemDone,
   type ScoringContext,
 } from '@/lib/calculatePoints';
-import { GraduationCap, Shield, Crown, Check, Minus, ExternalLink, BadgeCheck } from 'lucide-react';
+import {
+  expandLessonVerses,
+  recitedRefs,
+  isLessonApproved,
+  lessonParts,
+  climbProgress,
+  currentLesson,
+} from '@/lib/manualProgress';
+import { GraduationCap, Shield, Crown, Check, Minus, ExternalLink, BadgeCheck, Circle, Mountain } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-/** Single verses of a lesson verse list (ranges expanded), keeping the notebook version */
-function expandLessonVerses(verses: LessonVerse[] | undefined) {
-  return (verses ?? []).flatMap(v => expandVerseRange(v.ref).map(ref => ({ ref, version: v.version })));
+/** A lesson has something to show in the details grid once it has requirements or exam grades */
+function hasDetails(lesson: Lesson, participants: Participant[]): boolean {
+  return (lesson.verses?.length ?? 0) + (lesson.challenge?.length ?? 0) + (lesson.items?.length ?? 0) > 0
+    || participants.some(p => (p.exams ?? []).some(e => e.lesson === lesson.id));
 }
 
-/** Single verse refs a participant has recited (not suspended) */
-function recitedRefs(participant: Participant): Set<string> {
-  return new Set(
-    (participant.memorizedVerses ?? [])
-      .filter(v => !isVerseSuspended(v))
-      .flatMap(v => expandVerseRange(getVerseRef(v)))
+/** What the selected boy has done and still needs in his current lesson */
+function ClimberChecklist({ participant, lessonsData }: { participant: Participant; lessonsData: LessonsData }) {
+  const lesson = currentLesson(participant, lessonsData);
+  const progress = climbProgress(participant, lessonsData);
+  const total = lessonsData.lessons.length;
+  const startedElsewhere = lessonsData.lessons.filter(l =>
+    l.id !== lesson?.id && !isLessonApproved(participant, l, lessonsData) &&
+    lessonParts(participant, l, lessonsData).some(part => part.done)
+  );
+  return (
+    <div className="rounded-lg bg-muted/30 border border-border p-4 space-y-3">
+      <p className="text-sm text-muted-foreground">
+        <span className="font-semibold text-foreground">{participant.name}</span> já subiu{' '}
+        <span className="tabular-nums font-semibold text-accent">
+          {progress.toLocaleString('pt-BR', { maximumFractionDigits: 1 })} de {total}
+        </span>{' '}
+        tarefas.
+      </p>
+      {[lesson, ...startedElsewhere].filter(Boolean).map(l => (
+        <div key={l.id}>
+          <p className="text-sm font-medium text-primary mb-1.5">
+            Tarefa {l.id} — {l.title}{l.id === lesson?.id && <span className="text-xs text-muted-foreground font-normal"> (próxima)</span>}
+          </p>
+          <ul className="flex flex-wrap gap-x-4 gap-y-1">
+            {lessonParts(participant, l, lessonsData).map(part => (
+              <li key={part.label} className={cn('inline-flex items-center gap-1 text-sm', part.done ? 'text-foreground' : 'text-muted-foreground')}>
+                {part.done
+                  ? <Check className="w-4 h-4 text-green-600" />
+                  : <Circle className="w-3.5 h-3.5" />}
+                {part.label}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+      {!lesson && <p className="text-sm font-semibold text-accent">Todas as tarefas aprovadas — rumo ao topo!</p>}
+    </div>
   );
 }
 
@@ -55,6 +96,7 @@ function DoneCell({ done }: { done: boolean }) {
 
 const Manual = () => {
   const { data, loading, error, scoringContext } = useLeaderboardData();
+  const [selectedId, setSelectedId] = useState<number | undefined>();
 
   if (loading) {
     return <LoadingState message="Carregando Manual do Candidato..." />;
@@ -67,6 +109,8 @@ const Manual = () => {
   const lessonsData = data.lessonsData;
   const versesData = data.versesData;
   const participants = [...data.participants].sort((a, b) => a.name.localeCompare(b.name));
+  const selectedParticipant = participants.find(p => p.id === selectedId);
+  const pendingLessons = (lessonsData?.lessons ?? []).filter(lesson => !hasDetails(lesson, participants));
 
   return (
     <div className="min-h-screen bg-background">
@@ -106,7 +150,37 @@ const Manual = () => {
                   title="Nenhuma tarefa cadastrada"
                   description="As tarefas do Manual aparecerão aqui"
                 />
-              ) : lessonsData.lessons.map(lesson => {
+              ) : (
+              <>
+              <div className="card-royal p-3 sm:p-4 space-y-4">
+                <ClimbMountain
+                  participants={participants}
+                  lessonsData={lessonsData}
+                  selectedId={selectedId}
+                />
+                <ClimbLegend
+                  participants={participants}
+                  lessonsData={lessonsData}
+                  selectedId={selectedId}
+                  onSelect={setSelectedId}
+                />
+                {selectedParticipant ? (
+                  <ClimberChecklist participant={selectedParticipant} lessonsData={lessonsData} />
+                ) : (
+                  <p className="text-center text-sm text-muted-foreground">
+                    Toque num nome para ver a trilha e o que falta na próxima tarefa.
+                  </p>
+                )}
+              </div>
+
+              <div className="text-center pt-4">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-4">
+                  <Mountain className="w-4 h-4" />
+                  <span className="text-sm font-medium">Detalhes por tarefa</span>
+                </div>
+              </div>
+
+              {lessonsData.lessons.filter(lesson => hasDetails(lesson, participants)).map(lesson => {
                 const required = expandLessonVerses(lesson.verses);
                 const challenge = expandLessonVerses(lesson.challenge);
                 const verseColumns = [
@@ -193,10 +267,7 @@ const Manual = () => {
                             const grade = getBestExamGrade(participant, lesson.id);
                             const attempts = (participant.exams ?? []).filter(e => e.lesson === lesson.id).length;
                             const passed = grade !== undefined && grade >= lessonsData.exam.passGrade;
-                            const approved =
-                              required.every(v => recited.has(v.ref)) &&
-                              (lesson.items ?? []).every(item => isLessonItemDone(participant, lesson.id, item.id)) &&
-                              (!lesson.exam || passed);
+                            const approved = isLessonApproved(participant, lesson, lessonsData);
                             return (
                               <tr key={participant.id} className="border-b last:border-0">
                                 <td className="py-2 px-4 sm:px-2 font-medium text-foreground sticky left-0 bg-card">
@@ -243,6 +314,14 @@ const Manual = () => {
                   </div>
                 );
               })}
+
+              {pendingLessons.length > 0 && (
+                <p className="text-sm text-muted-foreground text-center italic">
+                  Tarefas {pendingLessons.map(l => l.id).join(', ')}: requisitos a definir.
+                </p>
+              )}
+              </>
+              )}
 
               <p className="text-xs text-muted-foreground text-center">
                 <BadgeCheck className="w-3 h-3 inline text-accent" /> tarefa aprovada (versículos obrigatórios, itens e prova ≥ {lessonsData?.exam.passGrade ?? 7})

@@ -3,6 +3,7 @@ import { Hero } from '@/components/Hero';
 import { RulesSection } from '@/components/RulesSection';
 import { Podium } from '@/components/Podium';
 import { Leaderboard } from '@/components/Leaderboard';
+import { ClimbSection } from '@/components/ClimbSection';
 import { Footer } from '@/components/Footer';
 import { LoadingState } from '@/components/LoadingState';
 import { ErrorState } from '@/components/ErrorState';
@@ -30,6 +31,9 @@ const Index = () => {
         />
         <RulesSection rules={data.rules} />
         <Podium participants={sortedParticipants} />
+        {data.lessonsData && (
+          <ClimbSection participants={data.participants} lessonsData={data.lessonsData} />
+        )}
         <Leaderboard participants={sortedParticipants} />
       </main>
       <Footer />

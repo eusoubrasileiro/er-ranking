@@ -8,7 +8,6 @@
     { "id": 6, "description": "Versiculo do Manual", "points": 2, "display": "2×", "icon": "GraduationCap", "explanation": "Versiculos obrigatorios das tarefas do Manual do Candidato valem o dobro. Ex.: Jo 3:16 = 70 pts." },
     { "id": 7, "description": "Desafio do Manual", "points": 3, "display": "3×", "icon": "Medal", "explanation": "Versiculo desafio da tarefa (opcional) vale o triplo. Ex.: Mt 10:32-33 = 75 + 105 pts." },
     { "id": 8, "description": "Prova escrita da tarefa", "points": 50, "display": "ate 50", "icon": "PenLine", "explanation": "Nota x 5 (nota 10 = 50 pts). Aprovado com nota 7. Uma recuperacao; vale a maior nota." },
-    { "id": 9, "description": "Tema, Compromisso e Hino", "points": 55, "icon": "BadgeCheck", "explanation": "Tarefa 1: dizer o Tema e o refrao do Hino de cor e o Compromisso (minimo 3 promessas, explicar 1)." },
     { "id": 10, "description": "Disciplina", "points": -10, "icon": "AlertTriangle", "explanation": "Cristaos da igreja: -10pts | Nao cristaos: -5pts | Cristaos de fora: -7pts" },
     { "id": 11, "description": "Anotacao de Pregacao", "points": 30, "icon": "FileText", "explanation": "Ate 30pts proporcional a qualidade e idade. Avaliado pelo lider." }
   ]
