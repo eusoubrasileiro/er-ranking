@@ -1,7 +1,7 @@
 {
   "season": "2026/2",
   "seasonStart": "2026-09-27",
-  "updatedAt": "2026-10-08T12:00:00.000Z",
+  "updatedAt": "2026-10-08T15:00:00.000Z",
   "pointsAsOf": "2026-10-04T00:00:00.000Z",
   "participants": [
     {
@@ -10,14 +10,12 @@
       "memorizedVerses": [
         {
           "ref": "Rm 3:23",
-          "version": "ARC",
-          "versionPending": true,
+          "version": "ARA",
           "addedAt": "2026-09-27T12:00:00.000Z"
         },
         {
           "ref": "Jo 3:16",
-          "version": "ARC",
-          "versionPending": true,
+          "version": "ARA",
           "addedAt": "2026-09-27T12:00:00.000Z"
         },
         {
@@ -69,8 +67,28 @@
           "addedAt": "2026-09-27T12:00:00.000Z"
         },
         {
+          "date": "2026-09-27",
+          "type": "igreja",
+          "addedAt": "2026-09-27T12:00:00.000Z"
+        },
+        {
+          "date": "2026-09-27",
+          "type": "igreja",
+          "addedAt": "2026-09-27T12:00:00.000Z"
+        },
+        {
           "date": "2026-10-04",
           "type": "embaixada",
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        },
+        {
+          "date": "2026-10-04",
+          "type": "igreja",
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        },
+        {
+          "date": "2026-10-04",
+          "type": "igreja",
           "addedAt": "2026-10-04T12:00:00.000Z"
         }
       ],
@@ -93,14 +111,12 @@
       "memorizedVerses": [
         {
           "ref": "Rm 3:23",
-          "version": "ARC",
-          "versionPending": true,
+          "version": "ARA",
           "addedAt": "2026-09-27T12:00:00.000Z"
         },
         {
           "ref": "Jo 3:16",
-          "version": "ARC",
-          "versionPending": true,
+          "version": "ARA",
           "addedAt": "2026-09-27T12:00:00.000Z"
         },
         {
@@ -138,8 +154,28 @@
           "addedAt": "2026-09-27T12:00:00.000Z"
         },
         {
+          "date": "2026-09-27",
+          "type": "igreja",
+          "addedAt": "2026-09-27T12:00:00.000Z"
+        },
+        {
+          "date": "2026-09-27",
+          "type": "igreja",
+          "addedAt": "2026-09-27T12:00:00.000Z"
+        },
+        {
           "date": "2026-10-04",
           "type": "embaixada",
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        },
+        {
+          "date": "2026-10-04",
+          "type": "igreja",
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        },
+        {
+          "date": "2026-10-04",
+          "type": "igreja",
           "addedAt": "2026-10-04T12:00:00.000Z"
         }
       ],
@@ -153,14 +189,12 @@
       "memorizedVerses": [
         {
           "ref": "Rm 3:23",
-          "version": "ARC",
-          "versionPending": true,
+          "version": "ARA",
           "addedAt": "2026-09-27T12:00:00.000Z"
         },
         {
           "ref": "Jo 3:16",
-          "version": "ARC",
-          "versionPending": true,
+          "version": "ARA",
           "addedAt": "2026-09-27T12:00:00.000Z"
         },
         {

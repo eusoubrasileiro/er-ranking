@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T19:02:27.630Z",
+  "generatedAt": "2026-10-08T19:14:28.862Z",
   "defaultVersion": "NVI",
   "versions": {
     "NVI": {
@@ -52,6 +52,12 @@
         "text": "Porque todos pecaram e destituídos estão da glória de Deus",
         "wordCount": 10,
         "youversionUrl": "https://www.bible.com/pt/bible/212/ROM.3.23.ARC"
+      },
+      "ARA": {
+        "reference": "Romanos 3:23",
+        "text": "pois todos pecaram e carecem da glória de Deus",
+        "wordCount": 9,
+        "youversionUrl": "https://www.bible.com/pt/bible/1608/ROM.3.23.ARA"
       }
     },
     "Jo 3:16": {
@@ -72,6 +78,12 @@
         "text": "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna.",
         "wordCount": 28,
         "youversionUrl": "https://www.bible.com/pt/bible/212/JHN.3.16.ARC"
+      },
+      "ARA": {
+        "reference": "João 3:16",
+        "text": "Porque Deus amou ao mundo de tal maneira que deu o seu Filho unigênito, para que todo o que nele crê não pereça, mas tenha a vida eterna.",
+        "wordCount": 28,
+        "youversionUrl": "https://www.bible.com/pt/bible/1608/JHN.3.16.ARA"
       }
     },
     "Sl 23:1": {

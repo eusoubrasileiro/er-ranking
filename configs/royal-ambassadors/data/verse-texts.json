@@ -1,20 +1,33 @@
 {
   "_comment": "Hand-entered verse texts for versions the YouVersion API key does not serve. Copied exactly from bible.com (or from the printed Manual). fetch-verses.js merges these into verses.json.",
   "versions": {
-    "ARC": { "id": 212, "name": "Almeida Revista e Corrigida" },
-    "ARA": { "id": 1608, "name": "Almeida Revista e Atualizada" },
-    "NAA": { "id": 1840, "name": "Nova Almeida Atualizada" },
-    "Manual": { "name": "Texto do Manual do Candidato" }
+    "ARC": {
+      "id": 212,
+      "name": "Almeida Revista e Corrigida"
+    },
+    "ARA": {
+      "id": 1608,
+      "name": "Almeida Revista e Atualizada"
+    },
+    "NAA": {
+      "id": 1840,
+      "name": "Nova Almeida Atualizada"
+    },
+    "Manual": {
+      "name": "Texto do Manual do Candidato"
+    }
   },
   "verses": {
     "2Co 5:20": {
       "Manual": "De sorte que somos embaixadores por Cristo, como se Deus por nós vos exortasse. Rogamo-vos, pois, por Cristo que vos reconcilieis com Deus."
     },
     "Rm 3:23": {
-      "ARC": "Porque todos pecaram e destituídos estão da glória de Deus"
+      "ARC": "Porque todos pecaram e destituídos estão da glória de Deus",
+      "ARA": "pois todos pecaram e carecem da glória de Deus"
     },
     "Jo 3:16": {
-      "ARC": "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna."
+      "ARC": "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna.",
+      "ARA": "Porque Deus amou ao mundo de tal maneira que deu o seu Filho unigênito, para que todo o que nele crê não pereça, mas tenha a vida eterna."
     },
     "Mt 10:32": {
       "ARC": "Portanto, qualquer que me confessar diante dos homens, eu o confessarei diante de meu Pai, que está nos céus."
