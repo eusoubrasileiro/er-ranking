@@ -4,10 +4,18 @@ import { Footer } from '@/components/Footer';
 import { LoadingState } from '@/components/LoadingState';
 import { ErrorState } from '@/components/ErrorState';
 import { ViewModeToggle } from '@/components/ViewModeToggle';
+import { VersionBadge, KindBadge } from '@/components/VerseBadges';
 import { useLeaderboardData } from '@/hooks/useLeaderboardData';
-import { useVersesData } from '@/hooks/useVersesData';
 import { isVerseRange, expandVerseRange, calculateVersePoints } from '@/lib/verseUtils';
-import { getVerseRef, isVerseSuspended, type VerseRecord } from '@/lib/calculatePoints';
+import {
+  getVerseRef,
+  isVerseSuspended,
+  isVerseVersionPending,
+  scoreVerseRecord,
+  getVerseRecordPoints,
+  findManualVerse,
+  type VerseRecord,
+} from '@/lib/calculatePoints';
 import { BookOpen, Search, ExternalLink, Eye, List, Shield, Crown } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -19,32 +27,24 @@ import {
 } from "@/components/ui/accordion";
 
 const Versiculos = () => {
-  const { data: leaderboardData, loading: loadingLeaderboard, error: errorLeaderboard } = useLeaderboardData();
-  const { data: versesData, isLoading: loadingVerses, error: errorVerses } = useVersesData();
+  const { data: leaderboardData, loading, error, scoringContext } = useLeaderboardData();
+  const versesData = leaderboardData?.versesData;
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'compact' | 'expanded' | 'allVerses'>('compact');
   const [selectedVersion, setSelectedVersion] = useState<string>('');
 
-  const loading = loadingLeaderboard || loadingVerses;
-  const error = errorLeaderboard || (errorVerses ? 'Erro ao carregar versículos' : null);
-
-  // Helper function to calculate points for a single reference (handles ranges)
-  const calculateRefPoints = (ref: string): number => {
-    const expanded = expandVerseRange(ref);
-    return expanded.reduce((sum, singleRef) => {
-      const verseData = versesData?.verses[singleRef]?.[selectedVersion];
-      if (verseData?.wordCount) {
-        return sum + calculateVersePoints(verseData.wordCount);
-      }
-      return sum;
-    }, 0);
+  // Points always follow the version the boy recited (the toggle only changes the "Todos Versículos" text)
+  const calculateTotalVersePoints = (verses: VerseRecord[]): number => {
+    return verses.reduce((total, v) => total + getVerseRecordPoints(v, scoringContext), 0);
   };
 
-  // Helper function to calculate total points for a participant's verses (excluding suspended)
-  const calculateTotalVersePoints = (verses: VerseRecord[]): number => {
-    return verses
-      .filter(v => !isVerseSuspended(v))
-      .reduce((total, v) => total + calculateRefPoints(getVerseRef(v)), 0);
+  // Text of a single verse in the recited version, falling back to the default version
+  const getVerseText = (singleRef: string, version: string) => {
+    const byVersion = versesData?.verses[singleRef];
+    const exact = byVersion?.[version];
+    if (exact) return { data: exact, fallback: false };
+    const fallback = byVersion?.[versesData?.defaultVersion ?? 'NVI'];
+    return { data: fallback, fallback: !!fallback };
   };
 
   // Helper function to count total individual verses (expanding ranges, excluding suspended)
@@ -145,7 +145,7 @@ const Versiculos = () => {
               </div>
 
               <p className="text-sm text-primary-foreground/60">
-                {selectedVersion && versesData?.versions[selectedVersion]?.name || 'NVI'} • Atualizado em {versesData?.generatedAt ? new Date(versesData.generatedAt).toLocaleDateString('pt-BR') : '—'}
+                Texto exato, com referência, na versão de cada embaixador • Atualizado em {versesData?.generatedAt ? new Date(versesData.generatedAt).toLocaleDateString('pt-BR') : '—'}
               </p>
             </div>
           </div>
@@ -180,7 +180,7 @@ const Versiculos = () => {
               </div>
 
               {/* Row 2: Version Toggle */}
-              {availableVersions.length > 1 && (
+              {viewMode === 'allVerses' && availableVersions.length > 1 && (
                 <div className="flex items-center justify-center gap-2 pt-2 border-t">
                   <span className="text-sm text-muted-foreground mr-2">Versão:</span>
                   {availableVersions.map((version) => (
@@ -220,14 +220,18 @@ const Versiculos = () => {
                   <div className="space-y-4">
                     {allUniqueVerses.map((ref, idx) => {
                       const verseData = versesData?.verses[ref]?.[selectedVersion];
-                      const points = verseData?.wordCount ? calculateVersePoints(verseData.wordCount) : null;
+                      const manual = findManualVerse(ref, scoringContext.lessonsData);
+                      const points = verseData?.wordCount
+                        ? calculateVersePoints(verseData.wordCount) * (manual?.multiplier ?? 1)
+                        : null;
                       return (
                         <div
                           key={idx}
                           className="card-royal p-6 animate-fade-in"
                         >
-                          <h3 className="text-lg font-semibold text-accent mb-3">
+                          <h3 className="text-lg font-semibold text-accent mb-3 flex items-center gap-2">
                             {verseData?.reference || ref}
+                            {manual && <KindBadge kind={manual.kind} multiplier={manual.multiplier} lessonId={manual.lessonId} />}
                           </h3>
                           {verseData ? (
                             <div className="space-y-3">
@@ -299,9 +303,10 @@ const Versiculos = () => {
                               const ref = getVerseRef(verse);
                               const suspended = isVerseSuspended(verse);
                               const range = isVerseRange(ref);
-                              const points = suspended ? 0 : calculateRefPoints(ref);
+                              const parts = scoreVerseRecord(verse, scoringContext);
+                              const points = getVerseRecordPoints(verse, scoringContext);
                               const expanded = expandVerseRange(ref);
-                              const firstVerseData = versesData?.verses[expanded[0]]?.[selectedVersion];
+                              const firstVerseData = getVerseText(expanded[0], parts[0].version).data;
 
                               if (suspended) {
                                 return (
@@ -326,6 +331,8 @@ const Versiculos = () => {
                                   title={range ? `${expanded.length} versículos` : undefined}
                                 >
                                   <span>{ref}</span>
+                                  <VersionBadge version={parts[0].version} pending={isVerseVersionPending(verse)} />
+                                  <KindBadge kind={parts[0].kind} multiplier={parts[0].multiplier} lessonId={parts[0].lessonId} />
                                   {points > 0 && (
                                     <span className="text-xs opacity-80">+{points}</span>
                                   )}
@@ -341,7 +348,14 @@ const Versiculos = () => {
                               const suspended = isVerseSuspended(verse);
                               const range = isVerseRange(ref);
                               const expanded = expandVerseRange(ref);
-                              const totalPoints = suspended ? 0 : calculateRefPoints(ref);
+                              const parts = scoreVerseRecord(verse, scoringContext);
+                              const totalPoints = getVerseRecordPoints(verse, scoringContext);
+                              const badges = (
+                                <>
+                                  <VersionBadge version={parts[0].version} pending={isVerseVersionPending(verse)} />
+                                  <KindBadge kind={parts[0].kind} multiplier={parts[0].multiplier} lessonId={parts[0].lessonId} />
+                                </>
+                              );
 
                               if (range) {
                                 // Render verse range with breakdown
@@ -351,6 +365,7 @@ const Versiculos = () => {
                                       <div className="flex items-center gap-2 w-full">
                                         <span className={`font-medium ${suspended ? 'text-muted-foreground line-through' : 'text-accent'}`}>{ref}</span>
                                         <span className="text-xs text-muted-foreground">({expanded.length} versículos)</span>
+                                        {badges}
                                         {suspended ? (
                                           <span className="text-xs text-muted-foreground">suspenso</span>
                                         ) : (
@@ -361,8 +376,8 @@ const Versiculos = () => {
                                     <AccordionContent className="px-4 bg-muted/20">
                                       <div className="space-y-4">
                                         {expanded.map((singleRef, vIdx) => {
-                                          const verseData = versesData?.verses[singleRef]?.[selectedVersion];
-                                          const points = verseData?.wordCount ? calculateVersePoints(verseData.wordCount) : null;
+                                          const { data: verseData, fallback } = getVerseText(singleRef, parts[vIdx].version);
+                                          const points = suspended ? null : parts[vIdx].points;
                                           return (
                                             <div key={vIdx} className={vIdx > 0 ? "pt-3 border-t border-border/50" : ""}>
                                               <div className="flex items-center justify-between mb-2">
@@ -379,7 +394,7 @@ const Versiculos = () => {
                                                     "{verseData.text}"
                                                   </p>
                                                   <div className="flex items-center justify-between text-xs text-muted-foreground">
-                                                    <span>{verseData.wordCount} palavras</span>
+                                                    <span>{fallback ? `Texto ${parts[vIdx].version} ainda não cadastrado (mostrando ${versesData?.defaultVersion})` : `${verseData.wordCount} palavras`}</span>
                                                     <a
                                                       href={verseData.youversionUrl}
                                                       target="_blank"
@@ -406,13 +421,14 @@ const Versiculos = () => {
                               }
 
                               // Render single verse
-                              const verseData = versesData?.verses[ref]?.[selectedVersion];
-                              const points = (!suspended && verseData?.wordCount) ? calculateVersePoints(verseData.wordCount) : null;
+                              const { data: verseData, fallback } = getVerseText(ref, parts[0].version);
+                              const points = suspended ? null : totalPoints;
                               return (
                                 <AccordionItem key={idx} value={`verse-${idx}`} className={`border border-border rounded-lg overflow-hidden ${suspended ? 'opacity-60' : ''}`}>
                                   <AccordionTrigger className="px-4 hover:bg-muted/50">
                                     <div className="flex items-center gap-2 w-full">
                                       <span className={`font-medium ${suspended ? 'text-muted-foreground line-through' : 'text-accent'}`}>{verseData?.reference || ref}</span>
+                                      {badges}
                                       {suspended ? (
                                         <span className="text-xs text-muted-foreground">suspenso</span>
                                       ) : points && (
@@ -428,7 +444,9 @@ const Versiculos = () => {
                                         </p>
                                         <div className="flex items-center justify-between pt-2 border-t">
                                           <span className="text-sm text-muted-foreground">
-                                            {verseData.wordCount} palavras • <span className="text-accent font-semibold">+{points} pts</span>
+                                            {fallback
+                                              ? `Texto ${parts[0].version} ainda não cadastrado (mostrando ${versesData?.defaultVersion})`
+                                              : `${verseData.wordCount} palavras`} • <span className="text-accent font-semibold">+{points} pts</span>
                                           </span>
                                           <a
                                             href={verseData.youversionUrl}

@@ -1,79 +1,21 @@
 {
-  "updatedAt": "2026-05-31T20:00:00",
+  "updatedAt": "2026-09-27T00:00:00",
   "defaultRules": [
-    { "position": 1, "label": "1o Lugar", "points": 50 },
-    { "position": 2, "label": "2o Lugar", "points": 30 },
-    { "position": 3, "label": "3o Lugar", "points": 20 }
-  ],
-  "games": [
     {
-      "id": 1,
-      "name": "Primeira Gincana 2026",
-      "date": "2026-01-10",
-      "icon": "Users",
-      "results": [
-        { "participantId": 3, "position": 1, "points": 40 },
-        { "participantId": 4, "position": 1, "points": 40 },
-        { "participantId": 5, "position": 1, "points": 40 }
-      ]
+      "position": 1,
+      "label": "1o Lugar",
+      "points": 50
     },
     {
-      "id": 2,
-      "name": "Gincana Daniel 1",
-      "date": "2026-02-07",
-      "icon": "Users",
-      "results": [
-        { "participantId": 1, "position": 1, "points": 40 },
-        { "participantId": 2, "position": 1, "points": 40 },
-        { "participantId": 3, "position": 1, "points": 40 }
-      ]
+      "position": 2,
+      "label": "2o Lugar",
+      "points": 30
     },
     {
-      "id": 3,
-      "name": "Gincana Daniel 2",
-      "date": "2026-02-15",
-      "icon": "Users",
-      "results": [
-        { "participantId": 2, "position": 1, "points": 60 },
-        { "participantId": 4, "position": 1, "points": 60 },
-        { "participantId": 8, "position": 2, "points": 40 },
-        { "participantId": 1, "position": 2, "points": 40 },
-        { "participantId": 3, "position": 3, "points": 20 },
-        { "participantId": 5, "position": 3, "points": 20 }
-      ]
-    },
-    {
-      "id": 4,
-      "name": "Gincana Daniel 3",
-      "date": "2026-03-08",
-      "icon": "Users",
-      "results": [
-        { "participantId": 4, "position": 1, "points": 60 },
-        { "participantId": 2, "position": 2, "points": 40 },
-        { "participantId": 3, "position": 3, "points": 20 }
-      ]
-    },
-    {
-      "id": 5,
-      "name": "Gincana Daniel 8-12",
-      "date": "2026-05-30",
-      "icon": "Users",
-      "results": [
-        { "participantId": 3, "position": 1, "points": 60 },
-        { "participantId": 2, "position": 2, "points": 40 },
-        { "participantId": 1, "position": 3, "points": 20 }
-      ]
-    },
-    {
-      "id": 6,
-      "name": "Vida de Bill Wallace",
-      "date": "2026-05-31",
-      "icon": "Users",
-      "results": [
-        { "participantId": 1, "position": 1, "points": 60 },
-        { "participantId": 3, "position": 1, "points": 60 },
-        { "participantId": 2, "position": 2, "points": 40 }
-      ]
+      "position": 3,
+      "label": "3o Lugar",
+      "points": 20
     }
-  ]
+  ],
+  "games": []
 }

@@ -1,1087 +1,249 @@
 {
-  "season": "2026",
-  "updatedAt": "2026-08-02T00:30:00.000Z",
+  "season": "2026/2",
+  "seasonStart": "2026-09-27",
+  "updatedAt": "2026-10-08T12:00:00.000Z",
+  "pointsAsOf": "2026-10-04T00:00:00.000Z",
   "participants": [
     {
       "id": 1,
       "name": "Arthur",
       "memorizedVerses": [
-        "Jo 3:16",
-        "Sl 23:1",
-        "Jo 14:6",
-        "Fp 4:13",
-        "2 Pe 1:21",
-        "Sl 119:11",
-        "Mt 6:9-13",
-        "Sl 91:1",
-        "Jó 3:2",
-        "Jo 11:35",
-        "Sl 23:2",
-        { "ref": "Jo 1:1", "suspended": true, "suspendedAt": "2026-02-15T12:00:00.000Z" },
-        { "ref": "Sl 132:1-2", "addedAt": "2026-02-18T12:00:00.000Z", "suspended": true, "suspendedAt": "2026-02-22T12:00:00.000Z" },
-        { "ref": "Gn 1:1", "addedAt": "2026-02-22T12:00:00.000Z" }
+        {
+          "ref": "Rm 3:23",
+          "version": "ARC",
+          "versionPending": true,
+          "addedAt": "2026-09-27T12:00:00.000Z"
+        },
+        {
+          "ref": "Jo 3:16",
+          "version": "ARC",
+          "versionPending": true,
+          "addedAt": "2026-09-27T12:00:00.000Z"
+        },
+        {
+          "ref": "Sl 23:1-2",
+          "version": "NVI",
+          "versionPending": true,
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        },
+        {
+          "ref": "Sl 119:11",
+          "version": "NVI",
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        },
+        {
+          "ref": "Sl 48:1",
+          "version": "NVI",
+          "versionPending": true,
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        },
+        {
+          "ref": "Fp 4:13",
+          "version": "NVI",
+          "versionPending": true,
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        },
+        {
+          "ref": "Mt 28:19",
+          "version": "NVI",
+          "versionPending": true,
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        },
+        {
+          "ref": "Jó 22:1",
+          "version": "NVI",
+          "versionPending": true,
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        },
+        {
+          "ref": "Jó 20:1",
+          "version": "NVI",
+          "versionPending": true,
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        }
       ],
       "attendance": [
         {
-          "date": "2025-12-21",
-          "type": "embaixada"
-        },
-        {
-          "date": "2025-12-21",
-          "type": "igreja"
-        },
-        {
-          "date": "2025-12-27",
-          "type": "embaixada"
-        },
-        {
-          "date": "2025-12-28",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-03",
-          "type": "embaixada"
-        },
-        {
-          "date": "2026-01-04",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-05",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-08",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-04",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-04",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-10",
-          "type": "embaixada"
-        },
-        {
-          "date": "2026-01-11",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-11",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-21",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-22",
-          "type": "embaixada"
-        },
-        {
-          "date": "2026-01-22",
-          "type": "pg"
-        },
-        {
-          "date": "2026-01-25",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-02-07",
+          "date": "2026-09-27",
           "type": "embaixada",
-          "addedAt": "2026-02-08T00:06:29.656Z"
+          "addedAt": "2026-09-27T12:00:00.000Z"
         },
         {
-          "date": "2026-02-07",
+          "date": "2026-10-04",
           "type": "embaixada",
-          "addedAt": "2026-02-08T00:16:54.939Z"
-        },
-        {
-          "date": "2026-02-04",
-          "type": "embaixada",
-          "addedAt": "2026-02-08T00:35:34.238Z"
-        },
-        {
-          "date": "2026-02-15",
-          "type": "embaixada",
-          "addedAt": "2026-02-18T12:00:00.000Z"
-        },
-        {
-          "date": "2026-02-22",
-          "type": "igreja",
-          "addedAt": "2026-02-22T12:00:00.000Z"
-        },
-        {
-          "date": "2026-02-22",
-          "type": "embaixada",
-          "addedAt": "2026-02-22T12:00:00.000Z"
-        },
-        {
-          "date": "2026-03-01",
-          "type": "igreja",
-          "addedAt": "2026-03-01T12:00:00.000Z"
-        },
-        {
-          "date": "2026-03-28",
-          "type": "embaixada",
-          "addedAt": "2026-03-29T12:00:00.000Z"
-        },
-        {
-          "date": "2026-03-29",
-          "type": "igreja",
-          "addedAt": "2026-03-29T12:00:00.000Z"
-        },
-        {
-          "date": "2026-04-07",
-          "type": "pg",
-          "addedAt": "2026-04-12T18:00:00.000Z"
-        },
-        {
-          "date": "2026-04-19",
-          "type": "igreja",
-          "addedAt": "2026-04-19T12:00:00.000Z"
-        },
-        {
-          "date": "2026-05-30",
-          "type": "embaixada",
-          "addedAt": "2026-05-31T12:00:00.000Z"
-        },
-        {
-          "date": "2026-05-31",
-          "type": "igreja",
-          "addedAt": "2026-05-31T12:00:00.000Z"
-        },
-        {
-          "date": "2026-05-31",
-          "type": "embaixada",
-          "addedAt": "2026-05-31T20:00:00.000Z"
-        },
-        {
-          "date": "2026-06-24",
-          "type": "igreja",
-          "addedAt": "2026-07-05T12:00:00.000Z"
-        },
-        {
-          "date": "2026-06-28",
-          "type": "igreja",
-          "addedAt": "2026-07-05T12:00:00.000Z"
-        },
-        {
-          "date": "2026-06-28",
-          "type": "embaixada",
-          "addedAt": "2026-07-05T12:00:00.000Z"
-        },
-        {
-          "date": "2026-07-04",
-          "type": "embaixada",
-          "addedAt": "2026-07-05T12:00:00.000Z"
-        },
-        {
-          "date": "2026-07-30",
-          "type": "igreja",
-          "addedAt": "2026-08-02T00:30:00.000Z"
-        },
-        {
-          "date": "2026-07-31",
-          "type": "igreja",
-          "addedAt": "2026-08-02T00:30:00.000Z"
-        },
-        {
-          "date": "2026-08-01",
-          "type": "igreja",
-          "addedAt": "2026-08-02T00:30:00.000Z"
+          "addedAt": "2026-10-04T12:00:00.000Z"
         }
       ],
       "visitors": [
-        "Davi",
-        "Pedro"
-      ],
-      "candidatoProgress": {
-        "prerequisites": true,
-        "manualTasks": 0
-      },
-      "disciplines": [
         {
-          "date": "2026-02-07",
-          "points": -30,
-          "reason": "Não leu Daniel 1",
-          "addedAt": "2026-02-08T00:30:00.975Z"
+          "name": "Mãe do Arthur",
+          "addedAt": "2026-09-27T12:00:00.000Z"
         },
         {
-          "date": "2026-02-15",
-          "points": -20,
-          "reason": "Indisciplina",
-          "addedAt": "2026-02-18T12:00:00.000Z"
+          "name": "Irmão do Arthur",
+          "addedAt": "2026-09-27T12:00:00.000Z"
         }
       ],
-      "sermonNotes": [
-        {
-          "date": "2026-02-22",
-          "points": 30,
-          "description": "",
-          "addedAt": "2026-02-22T12:00:00.000Z"
-        }
-      ]
+      "exams": [],
+      "lessonItems": []
     },
     {
       "id": 2,
       "name": "Daniel",
-      "startPoints": 15,
       "memorizedVerses": [
-        "Jo 3:16",
-        "Gn 1:1",
-        "Sl 23:1-2",
-        "Mt 6:9-13",
-        { "ref": "Sl 1:1-6" },
-        "Fp 4:13",
-        { "ref": "Jó 3:2" },
-        { "ref": "Sl 119:11", "addedAt": "2026-02-22T12:00:00.000Z" }
+        {
+          "ref": "Rm 3:23",
+          "version": "ARC",
+          "versionPending": true,
+          "addedAt": "2026-09-27T12:00:00.000Z"
+        },
+        {
+          "ref": "Jo 3:16",
+          "version": "ARC",
+          "versionPending": true,
+          "addedAt": "2026-09-27T12:00:00.000Z"
+        },
+        {
+          "ref": "Gn 1:1",
+          "version": "NAA",
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        },
+        {
+          "ref": "Sl 23:1",
+          "version": "NAA",
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        },
+        {
+          "ref": "Sl 119:11",
+          "version": "NVI",
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        },
+        {
+          "ref": "Fp 4:13",
+          "version": "NVI",
+          "versionPending": true,
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        },
+        {
+          "ref": "Jó 3:2",
+          "version": "NVI",
+          "versionPending": true,
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        }
       ],
       "attendance": [
         {
-          "date": "2025-12-21",
-          "type": "igreja"
-        },
-        {
-          "date": "2025-12-27",
-          "type": "embaixada"
-        },
-        {
-          "date": "2025-12-28",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-04",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-10",
-          "type": "embaixada"
-        },
-        {
-          "date": "2026-01-11",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-22",
-          "type": "embaixada"
-        },
-        {
-          "date": "2026-01-25",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-02-01",
-          "type": "igreja",
-          "addedAt": "2026-02-08T00:06:49.443Z"
-        },
-        {
-          "date": "2026-02-07",
+          "date": "2026-09-27",
           "type": "embaixada",
-          "addedAt": "2026-02-08T00:16:54.939Z"
+          "addedAt": "2026-09-27T12:00:00.000Z"
         },
         {
-          "date": "2026-02-08",
-          "type": "igreja",
-          "addedAt": "2026-02-15T12:00:00.000Z"
-        },
-        {
-          "date": "2026-02-15",
-          "type": "igreja",
-          "addedAt": "2026-02-15T12:00:00.000Z"
-        },
-        {
-          "date": "2026-02-15",
+          "date": "2026-10-04",
           "type": "embaixada",
-          "addedAt": "2026-02-18T12:00:00.000Z"
-        },
-        {
-          "date": "2026-02-22",
-          "type": "igreja",
-          "addedAt": "2026-02-22T12:00:00.000Z"
-        },
-        {
-          "date": "2026-02-22",
-          "type": "embaixada",
-          "addedAt": "2026-02-22T12:00:00.000Z"
-        },
-        {
-          "date": "2026-03-01",
-          "type": "embaixada",
-          "addedAt": "2026-03-01T12:00:00.000Z"
-        },
-        {
-          "date": "2026-03-08",
-          "type": "embaixada",
-          "addedAt": "2026-03-08T12:00:00.000Z"
-        },
-        {
-          "date": "2026-03-08",
-          "type": "igreja",
-          "addedAt": "2026-03-08T12:00:00.000Z"
-        },
-        {
-          "date": "2026-03-28",
-          "type": "embaixada",
-          "addedAt": "2026-03-29T12:00:00.000Z"
-        },
-        {
-          "date": "2026-03-29",
-          "type": "igreja",
-          "addedAt": "2026-03-29T12:00:00.000Z"
-        },
-        {
-          "date": "2026-04-05",
-          "type": "igreja",
-          "addedAt": "2026-04-12T18:00:00.000Z"
-        },
-        {
-          "date": "2026-04-12",
-          "type": "embaixada",
-          "addedAt": "2026-04-12T12:00:00.000Z"
-        },
-        {
-          "date": "2026-04-12",
-          "type": "igreja",
-          "addedAt": "2026-04-12T12:00:00.000Z"
-        },
-        {
-          "date": "2026-04-19",
-          "type": "igreja",
-          "addedAt": "2026-04-19T12:00:00.000Z"
-        },
-        {
-          "date": "2026-05-30",
-          "type": "embaixada",
-          "addedAt": "2026-05-31T12:00:00.000Z"
-        },
-        {
-          "date": "2026-05-31",
-          "type": "igreja",
-          "addedAt": "2026-05-31T12:00:00.000Z"
-        },
-        {
-          "date": "2026-05-31",
-          "type": "embaixada",
-          "addedAt": "2026-05-31T20:00:00.000Z"
-        },
-        {
-          "date": "2026-06-28",
-          "type": "igreja",
-          "addedAt": "2026-07-05T12:00:00.000Z"
-        },
-        {
-          "date": "2026-06-28",
-          "type": "embaixada",
-          "addedAt": "2026-07-05T12:00:00.000Z"
-        },
-        {
-          "date": "2026-07-04",
-          "type": "embaixada",
-          "addedAt": "2026-07-05T12:00:00.000Z"
-        },
-        {
-          "date": "2026-08-01",
-          "type": "igreja",
-          "addedAt": "2026-08-02T00:30:00.000Z"
+          "addedAt": "2026-10-04T12:00:00.000Z"
         }
       ],
-      "visitors": [
-        "Pedro"
-      ],
-      "candidatoProgress": {
-        "prerequisites": true,
-        "manualTasks": 0
-      },
-      "disciplines": [
-        {
-          "date": "2026-02-07",
-          "points": -30,
-          "reason": "Não leu Daniel 1",
-          "addedAt": "2026-02-08T00:30:34.067Z"
-        }
-      ],
-      "sermonNotes": [
-        {
-          "date": "2026-02-08",
-          "points": 30,
-          "description": "",
-          "addedAt": "2026-02-15T12:00:00.000Z"
-        },
-        {
-          "date": "2026-02-15",
-          "points": 30,
-          "description": "",
-          "addedAt": "2026-02-15T12:00:00.000Z"
-        },
-        {
-          "date": "2026-02-22",
-          "points": 30,
-          "description": "",
-          "addedAt": "2026-02-22T12:00:00.000Z"
-        },
-        {
-          "date": "2026-04-05",
-          "points": 30,
-          "description": "",
-          "addedAt": "2026-04-12T12:00:00.000Z"
-        },
-        {
-          "date": "2026-04-12",
-          "points": 30,
-          "description": "",
-          "addedAt": "2026-04-12T12:00:00.000Z"
-        }
-      ]
+      "visitors": [],
+      "exams": [],
+      "lessonItems": []
     },
     {
       "id": 3,
       "name": "Richarlyson",
       "memorizedVerses": [
-        "Jo 3:16",
-        "Fp 4:13",
-        "Sl 119:11",
-        "Sl 119:103",
-        "Sl 32:8-9",
-        "Gn 1:1",
-        "Gn 1:3",
-        "Jó 3:2",
-        "Mt 6:9-13",
-        { "ref": "Sl 23:1-2", "addedAt": "2026-03-08T12:00:00.000Z" },
-        "Jo 11:35",
-        { "ref": "Ex 20:12-16", "addedAt": "2026-03-08T12:00:00.000Z" },
-        { "ref": "Jo 6:48", "suspended": true, "suspendedAt": "2026-02-15T12:00:00.000Z" },
-        { "ref": "Jo 8:1", "suspended": true, "suspendedAt": "2026-02-15T12:00:00.000Z" },
-        { "ref": "Rm 8:1", "addedAt": "2026-03-08T12:00:00.000Z" }
-      ],
-      "visitors": [
-        "tia Sarah",
-        "tio Walaf",
-        "tio Marco",
-        "Kelly namorada do Marco",
-        "Pedro",
-        "Pedro",
-        "Visitante 1 (almoço da igreja 03/05)",
-        "Visitante 2 (almoço da igreja 03/05)",
-        "Visitante 3 (almoço da igreja 03/05)",
-        "Visitante 4 (almoço da igreja 03/05)"
+        {
+          "ref": "Rm 3:23",
+          "version": "ARC",
+          "versionPending": true,
+          "addedAt": "2026-09-27T12:00:00.000Z"
+        },
+        {
+          "ref": "Jo 3:16",
+          "version": "ARC",
+          "versionPending": true,
+          "addedAt": "2026-09-27T12:00:00.000Z"
+        },
+        {
+          "ref": "Jó 3:2",
+          "version": "NVI",
+          "versionPending": true,
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        },
+        {
+          "ref": "Fp 4:13",
+          "version": "NVI",
+          "versionPending": true,
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        },
+        {
+          "ref": "Sl 119:11",
+          "version": "NVI",
+          "versionPending": true,
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        },
+        {
+          "ref": "Sl 23:1",
+          "version": "NVI",
+          "versionPending": true,
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        },
+        {
+          "ref": "Gn 1:1",
+          "version": "NVI",
+          "versionPending": true,
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        },
+        {
+          "ref": "Sl 119:103",
+          "version": "ARA",
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        },
+        {
+          "ref": "Mt 18:19",
+          "version": "ARA",
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        },
+        {
+          "ref": "Mt 5:5",
+          "version": "NAA",
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        },
+        {
+          "ref": "Mt 5:4",
+          "version": "NAA",
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        },
+        {
+          "ref": "Mt 5:8",
+          "version": "NVI",
+          "versionPending": true,
+          "addedAt": "2026-10-04T12:00:00.000Z"
+        }
       ],
       "attendance": [
         {
-          "date": "2025-12-21",
-          "type": "embaixada"
-        },
-        {
-          "date": "2025-12-21",
-          "type": "igreja"
-        },
-        {
-          "date": "2025-12-27",
-          "type": "embaixada"
-        },
-        {
-          "date": "2025-12-28",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-03",
-          "type": "embaixada"
-        },
-        {
-          "date": "2026-01-05",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-08",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-04",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-04",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-07",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-10",
-          "type": "embaixada"
-        },
-        {
-          "date": "2026-01-11",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-22",
-          "type": "embaixada"
-        },
-        {
-          "date": "2026-01-22",
-          "type": "pg"
-        },
-        {
-          "date": "2026-01-25",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-02-01",
-          "type": "igreja",
-          "addedAt": "2026-02-08T00:06:49.443Z"
-        },
-        {
-          "date": "2026-02-07",
+          "date": "2026-09-27",
           "type": "embaixada",
-          "addedAt": "2026-02-08T00:16:54.939Z"
+          "addedAt": "2026-09-27T12:00:00.000Z"
         },
         {
-          "date": "2026-02-15",
+          "date": "2026-10-04",
           "type": "embaixada",
-          "addedAt": "2026-02-18T12:00:00.000Z"
-        },
-        {
-          "date": "2026-02-22",
-          "type": "embaixada",
-          "addedAt": "2026-02-22T12:00:00.000Z"
-        },
-        {
-          "date": "2026-02-25",
-          "type": "igreja",
-          "addedAt": "2026-02-25T12:00:00.000Z"
-        },
-        {
-          "date": "2026-03-01",
-          "type": "igreja",
-          "addedAt": "2026-03-01T12:00:00.000Z"
-        },
-        {
-          "date": "2026-03-08",
-          "type": "embaixada",
-          "addedAt": "2026-03-08T12:00:00.000Z"
-        },
-        {
-          "date": "2026-04-07",
-          "type": "pg",
-          "addedAt": "2026-04-12T18:00:00.000Z"
-        },
-        {
-          "date": "2026-04-14",
-          "type": "pg",
-          "addedAt": "2026-04-18T12:00:00.000Z"
-        },
-        {
-          "date": "2026-05-30",
-          "type": "embaixada",
-          "addedAt": "2026-05-31T12:00:00.000Z"
-        },
-        {
-          "date": "2026-05-31",
-          "type": "embaixada",
-          "addedAt": "2026-05-31T20:00:00.000Z"
-        },
-        {
-          "date": "2026-06-24",
-          "type": "igreja",
-          "addedAt": "2026-07-05T12:00:00.000Z"
-        },
-        {
-          "date": "2026-06-28",
-          "type": "igreja",
-          "addedAt": "2026-07-05T12:00:00.000Z"
-        },
-        {
-          "date": "2026-06-28",
-          "type": "embaixada",
-          "addedAt": "2026-07-05T12:00:00.000Z"
-        },
-        {
-          "date": "2026-07-04",
-          "type": "embaixada",
-          "addedAt": "2026-07-05T12:00:00.000Z"
-        },
-        {
-          "date": "2026-07-30",
-          "type": "igreja",
-          "addedAt": "2026-08-02T00:30:00.000Z"
-        },
-        {
-          "date": "2026-07-31",
-          "type": "igreja",
-          "addedAt": "2026-08-02T00:30:00.000Z"
-        },
-        {
-          "date": "2026-08-01",
-          "type": "igreja",
-          "addedAt": "2026-08-02T00:30:00.000Z"
+          "addedAt": "2026-10-04T12:00:00.000Z"
         }
       ],
-      "disciplines": [
-        {
-          "date": "2026-02-07",
-          "points": -40,
-          "reason": "não leu Daniel 1",
-          "addedAt": "2026-02-08T00:31:40.477Z"
-        }
-      ],
-      "sermonNotes": [
-        {
-          "date": "2026-02-02",
-          "points": 30,
-          "description": "",
-          "addedAt": "2026-02-15T12:00:00.000Z"
-        },
-        {
-          "date": "2026-02-07",
-          "points": 30,
-          "description": "",
-          "addedAt": "2026-02-15T12:00:00.000Z"
-        },
-        {
-          "date": "2026-02-25",
-          "points": 30,
-          "description": "",
-          "addedAt": "2026-02-25T12:00:00.000Z"
-        },
-        {
-          "date": "2026-04-01",
-          "points": 30,
-          "description": "",
-          "addedAt": "2026-04-02T12:00:00.000Z"
-        }
-      ],
-      "candidatoProgress": {
-        "prerequisites": true,
-        "manualTasks": 0,
-        "addedAt": "2026-02-07T12:00:00.000Z"
-      }
+      "visitors": [],
+      "exams": [],
+      "lessonItems": []
     },
     {
       "id": 4,
       "name": "Miguel",
-      "memorizedVerses": [
-        "Gn 1:1",
-        "Fp 4:13",
-        "Jo 3:16",
-        { "ref": "1Ts 5:16-22", "addedAt": "2026-02-18T12:00:00.000Z" },
-        { "ref": "Jo 11:35", "addedAt": "2026-02-18T12:00:00.000Z" },
-        { "ref": "Ex 20:13-16", "addedAt": "2026-03-08T12:00:00.000Z" },
-        { "ref": "Gn 1:3-6", "addedAt": "2026-02-18T12:00:00.000Z" },
-        { "ref": "Gn 1:23", "addedAt": "2026-03-08T12:00:00.000Z" },
-        { "ref": "Jó 3:2", "addedAt": "2026-03-08T12:00:00.000Z" },
-        { "ref": "Jo 14:6", "addedAt": "2026-03-08T12:00:00.000Z" },
-        { "ref": "Mt 6:9-13", "addedAt": "2026-03-08T12:00:00.000Z" }
-      ],
-      "attendance": [
-        {
-          "date": "2025-12-21",
-          "type": "embaixada"
-        },
-        {
-          "date": "2025-12-21",
-          "type": "igreja"
-        },
-        {
-          "date": "2025-12-27",
-          "type": "embaixada"
-        },
-        {
-          "date": "2025-12-28",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-03",
-          "type": "embaixada"
-        },
-        {
-          "date": "2026-01-10",
-          "type": "embaixada"
-        },
-        {
-          "date": "2026-01-25",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-02-07",
-          "type": "embaixada",
-          "addedAt": "2026-02-08T00:16:54.939Z"
-        },
-        {
-          "date": "2026-02-08",
-          "type": "igreja",
-          "addedAt": "2026-02-15T12:00:00.000Z"
-        },
-        {
-          "date": "2026-02-15",
-          "type": "igreja",
-          "addedAt": "2026-02-15T12:00:00.000Z"
-        },
-        {
-          "date": "2026-02-15",
-          "type": "embaixada",
-          "addedAt": "2026-02-18T12:00:00.000Z"
-        },
-        {
-          "date": "2026-02-22",
-          "type": "igreja",
-          "addedAt": "2026-02-22T12:00:00.000Z"
-        },
-        {
-          "date": "2026-02-22",
-          "type": "embaixada",
-          "addedAt": "2026-02-22T12:00:00.000Z"
-        },
-        {
-          "date": "2026-03-01",
-          "type": "embaixada",
-          "addedAt": "2026-03-01T12:00:00.000Z"
-        },
-        {
-          "date": "2026-03-08",
-          "type": "embaixada",
-          "addedAt": "2026-03-08T12:00:00.000Z"
-        },
-        {
-          "date": "2026-03-08",
-          "type": "igreja",
-          "addedAt": "2026-03-08T12:00:00.000Z"
-        },
-        {
-          "date": "2026-03-28",
-          "type": "embaixada",
-          "addedAt": "2026-03-29T12:00:00.000Z"
-        },
-        {
-          "date": "2026-04-05",
-          "type": "igreja",
-          "addedAt": "2026-04-12T18:00:00.000Z"
-        },
-        {
-          "date": "2026-04-12",
-          "type": "embaixada",
-          "addedAt": "2026-04-12T12:00:00.000Z"
-        },
-        {
-          "date": "2026-04-12",
-          "type": "igreja",
-          "addedAt": "2026-04-12T12:00:00.000Z"
-        },
-        {
-          "date": "2026-04-19",
-          "type": "igreja",
-          "addedAt": "2026-04-19T12:00:00.000Z"
-        },
-        {
-          "date": "2026-06-28",
-          "type": "igreja",
-          "addedAt": "2026-07-05T12:00:00.000Z"
-        },
-        {
-          "date": "2026-06-28",
-          "type": "embaixada",
-          "addedAt": "2026-07-05T12:00:00.000Z"
-        },
-        {
-          "date": "2026-07-04",
-          "type": "embaixada",
-          "addedAt": "2026-07-05T12:00:00.000Z"
-        },
-        {
-          "date": "2026-07-30",
-          "type": "igreja",
-          "addedAt": "2026-08-02T00:30:00.000Z"
-        },
-        {
-          "date": "2026-07-31",
-          "type": "igreja",
-          "addedAt": "2026-08-02T00:30:00.000Z"
-        },
-        {
-          "date": "2026-08-01",
-          "type": "igreja",
-          "addedAt": "2026-08-02T00:30:00.000Z"
-        }
-      ],
-      "visitors": [
-        "primo Davi"
-      ],
-      "disciplines": [
-        {
-          "date": "2026-02-07",
-          "points": -10,
-          "reason": "não leu Daniel 1",
-          "addedAt": "2026-02-08T00:31:22.932Z"
-        }
-      ],
-      "sermonNotes": [
-        {
-          "date": "2026-02-15",
-          "points": 30,
-          "description": "",
-          "addedAt": "2026-02-21T12:00:00.000Z"
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "name": "Felipe",
-      "memorizedVerses": [
-        "Sl 23:1",
-        "Fp 4:13",
-        "Jó 3:2",
-        "Jo 6:4",
-        "Mt 6:9-13",
-        { "ref": "Jo 6:48", "suspended": true, "suspendedAt": "2026-02-15T12:00:00.000Z" },
-        { "ref": "Jo 3:16", "addedAt": "2026-02-18T12:00:00.000Z" },
-        { "ref": "Sl 119:11", "addedAt": "2026-02-18T12:00:00.000Z" }
-      ],
-      "attendance": [
-        {
-          "date": "2025-12-21",
-          "type": "embaixada"
-        },
-        {
-          "date": "2025-12-21",
-          "type": "igreja"
-        },
-        {
-          "date": "2025-12-27",
-          "type": "embaixada"
-        },
-        {
-          "date": "2025-12-28",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-03",
-          "type": "embaixada"
-        },
-        {
-          "date": "2026-01-04",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-04",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-07",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-10",
-          "type": "embaixada"
-        },
-        {
-          "date": "2026-01-11",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-11",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-01-22",
-          "type": "embaixada"
-        },
-        {
-          "date": "2026-01-22",
-          "type": "pg"
-        },
-        {
-          "date": "2026-01-25",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-02-01",
-          "type": "igreja",
-          "addedAt": "2026-02-08T00:06:49.443Z"
-        },
-        {
-          "date": "2026-02-15",
-          "type": "embaixada",
-          "addedAt": "2026-02-18T12:00:00.000Z"
-        },
-        {
-          "date": "2026-07-04",
-          "type": "embaixada",
-          "addedAt": "2026-07-05T12:00:00.000Z"
-        },
-        {
-          "date": "2026-07-31",
-          "type": "igreja",
-          "addedAt": "2026-08-02T00:30:00.000Z"
-        },
-        {
-          "date": "2026-08-01",
-          "type": "igreja",
-          "addedAt": "2026-08-02T00:30:00.000Z"
-        }
-      ],
-      "visitors": [
-        "Davi"
-      ]
-    },
-    {
-      "id": 6,
-      "name": "Caio",
-      "memorizedVerses": [
-        "Jo 3:16",
-        "Fp 4:13",
-        "Sl 23:1",
-        "Jo 6:48",
-        "Mt 6:9-13",
-        "Jó 3:2"
-      ],
-      "attendance": [
-        {
-          "date": "2025-12-27",
-          "type": "embaixada"
-        },
-        {
-          "date": "2026-01-03",
-          "type": "embaixada"
-        },
-        {
-          "date": "2026-01-22",
-          "type": "embaixada"
-        },
-        {
-          "date": "2026-01-22",
-          "type": "pg"
-        }
-      ]
-    },
-    {
-      "id": 7,
-      "name": "Elias",
-      "attendance": [
-        {
-          "date": "2025-12-21",
-          "type": "embaixada"
-        },
-        {
-          "date": "2026-07-04",
-          "type": "embaixada",
-          "addedAt": "2026-07-05T12:00:00.000Z"
-        }
-      ]
-    },
-    {
-      "id": 8,
-      "name": "João",
-      "memorizedVerses": [
-        "Jó 3:2",
-        "Jo 8:12",
-        "Sl 23:1",
-        "Fp 4:13",
-        { "ref": "Mt 6:9-13", "addedAt": "2026-02-18T12:00:00.000Z" },
-        { "ref": "Mt 6:6", "addedAt": "2026-02-18T12:00:00.000Z" }
-      ],
-      "attendance": [
-        {
-          "date": "2025-12-21",
-          "type": "embaixada"
-        },
-        {
-          "date": "2026-01-22",
-          "type": "embaixada"
-        },
-        {
-          "date": "2026-01-22",
-          "type": "pg"
-        },
-        {
-          "date": "2026-02-15",
-          "type": "embaixada",
-          "addedAt": "2026-02-18T12:00:00.000Z"
-        }
-      ]
-    },
-    {
-      "id": 9,
-      "name": "Kaique",
-      "attendance": [
-        {
-          "date": "2025-12-27",
-          "type": "embaixada"
-        },
-        {
-          "date": "2026-01-22",
-          "type": "pg"
-        }
-      ]
-    },
-    {
-      "id": 10,
-      "name": "Davi",
-      "attendance": [
-        {
-          "date": "2026-01-03",
-          "type": "embaixada"
-        }
-      ]
-    },
-    {
-      "id": 11,
-      "name": "Pedro",
-      "memorizedVerses": [
-        "Jó 3:2",
-        "Fp 4:13"
-      ],
-      "attendance": [
-        {
-          "date": "2026-01-22",
-          "type": "embaixada"
-        },
-        {
-          "date": "2026-01-22",
-          "type": "pg"
-        },
-        {
-          "date": "2026-01-25",
-          "type": "igreja"
-        },
-        {
-          "date": "2026-03-01",
-          "type": "embaixada",
-          "addedAt": "2026-03-01T12:00:00.000Z"
-        }
-      ]
-    },
-    {
-      "id": 12,
-      "name": "Leandro",
-      "memorizedVerses": [
-        "Mt 6:9-13",
-        "Jó 3:2",
-        "Jo 11:35",
-        "Jo 6:48"
-      ],
-      "attendance": [
-        {
-          "date": "2026-01-22",
-          "type": "embaixada"
-        }
-      ]
-    },
-    {
-      "id": 13,
-      "name": "Estevão",
-      "attendance": [
-        {
-          "date": "2026-07-04",
-          "type": "embaixada",
-          "addedAt": "2026-07-05T12:00:00.000Z"
-        }
-      ]
+      "memorizedVerses": [],
+      "attendance": [],
+      "visitors": [],
+      "exams": [],
+      "lessonItems": []
     }
-  ],
-  "pointsAsOf": "2026-07-12T00:00:00.000Z"
+  ]
 }

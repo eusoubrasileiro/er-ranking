@@ -1,4 +1,4 @@
-import { Shield, BookOpen, Home, UserPlus, Gamepad2, Star, CalendarDays, Database } from 'lucide-react';
+import { Shield, BookOpen, Home, UserPlus, Gamepad2, Star, CalendarDays, Database, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link, useLocation } from 'react-router-dom';
 import { useAppConfig } from '@/ConfigProvider';
@@ -30,6 +30,7 @@ export function Header() {
   const navItems = [
     { path: '/', route: routes?.home, icon: Home, fallbackLabel: 'Ranking' },
     { path: '/versiculos', route: routes?.verses, icon: BookOpen, fallbackLabel: 'Versiculos', feature: 'bibleVerses' },
+    { path: '/manual', route: routes?.manual, icon: GraduationCap, fallbackLabel: 'Manual', feature: 'candidatoProgress' },
     { path: '/visitantes', route: routes?.visitors, icon: UserPlus, fallbackLabel: 'Visitantes', feature: 'visitorTracking' },
     { path: '/jogos', route: routes?.games, icon: Gamepad2, fallbackLabel: 'Jogos', feature: 'games' },
     { path: '/presenca', route: routes?.attendance, icon: CalendarDays, fallbackLabel: 'Presenca', feature: 'attendanceCalendar' },

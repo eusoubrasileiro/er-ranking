@@ -1,0 +1,47 @@
+{
+  "_comment": "Hand-entered verse texts for versions the YouVersion API key does not serve. Copied exactly from bible.com (or from the printed Manual). fetch-verses.js merges these into verses.json.",
+  "versions": {
+    "ARC": { "id": 212, "name": "Almeida Revista e Corrigida" },
+    "ARA": { "id": 1608, "name": "Almeida Revista e Atualizada" },
+    "NAA": { "id": 1840, "name": "Nova Almeida Atualizada" },
+    "Manual": { "name": "Texto do Manual do Candidato" }
+  },
+  "verses": {
+    "2Co 5:20": {
+      "Manual": "De sorte que somos embaixadores por Cristo, como se Deus por nós vos exortasse. Rogamo-vos, pois, por Cristo que vos reconcilieis com Deus."
+    },
+    "Rm 3:23": {
+      "ARC": "Porque todos pecaram e destituídos estão da glória de Deus"
+    },
+    "Jo 3:16": {
+      "ARC": "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna."
+    },
+    "Mt 10:32": {
+      "ARC": "Portanto, qualquer que me confessar diante dos homens, eu o confessarei diante de meu Pai, que está nos céus."
+    },
+    "Mt 10:33": {
+      "ARC": "Mas qualquer que me negar diante dos homens, eu o negarei também diante de meu Pai, que está nos céus."
+    },
+    "Mt 28:19": {
+      "ARC": "Portanto, ide, ensinai todas as nações, batizando-as em nome do Pai, e do Filho, e do Espírito Santo"
+    },
+    "Sl 119:103": {
+      "ARA": "Quão doces são as tuas palavras ao meu paladar! Mais que o mel à minha boca."
+    },
+    "Mt 18:19": {
+      "ARA": "Em verdade também vos digo que, se dois dentre vós, sobre a terra, concordarem a respeito de qualquer coisa que, porventura, pedirem, ser-lhes-á concedida por meu Pai, que está nos céus."
+    },
+    "Gn 1:1": {
+      "NAA": "No princípio, Deus criou os céus e a terra."
+    },
+    "Sl 23:1": {
+      "NAA": "O SENHOR é o meu pastor; nada me faltará."
+    },
+    "Mt 5:4": {
+      "NAA": "— Bem-aventurados os que choram, porque serão consolados."
+    },
+    "Mt 5:5": {
+      "NAA": "— Bem-aventurados os mansos, porque herdarão a terra."
+    }
+  }
+}

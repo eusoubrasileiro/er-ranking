@@ -9,6 +9,7 @@ import Visitantes from "./pages/Visitantes";
 import Jogos from "./pages/Jogos";
 import Presenca from "./pages/Presenca";
 import Bonus from "./pages/Bonus";
+import Manual from "./pages/Manual";
 import Dados from "./pages/Dados";
 import NotFound from "./pages/NotFound";
 
@@ -25,6 +26,7 @@ function AppRoutes() {
     <Routes>
       <Route path="/" element={<Index />} />
       {features?.bibleVerses && <Route path="/versiculos" element={<Versiculos />} />}
+      {features?.candidatoProgress && <Route path="/manual" element={<Manual />} />}
       {features?.visitorTracking && <Route path="/visitantes" element={<Visitantes />} />}
       {features?.games && <Route path="/jogos" element={<Jogos />} />}
       {features?.attendanceCalendar && <Route path="/presenca" element={<Presenca />} />}

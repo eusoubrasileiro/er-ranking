@@ -5,6 +5,7 @@ import { LoadingState } from '@/components/LoadingState';
 import { ErrorState } from '@/components/ErrorState';
 import { ViewModeToggle } from '@/components/ViewModeToggle';
 import { useLeaderboardData } from '@/hooks/useLeaderboardData';
+import { getVisitorName } from '@/lib/calculatePoints';
 import { UserPlus, Search, Eye, List, Users, Shield, Crown } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 
@@ -30,7 +31,8 @@ const Visitantes = () => {
   const allVisitorsWithInviters = (() => {
     const visitorMap = new Map<string, string[]>();
     data?.participants.forEach(p => {
-      p.visitors?.forEach(visitor => {
+      p.visitors?.forEach(record => {
+        const visitor = getVisitorName(record);
         const existing = visitorMap.get(visitor) || [];
         existing.push(p.name);
         visitorMap.set(visitor, existing);
@@ -191,7 +193,7 @@ const Visitantes = () => {
                                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/30 text-accent text-sm font-medium"
                                 >
                                   <UserPlus className="w-3 h-3" />
-                                  <span>{visitor}</span>
+                                  <span>{getVisitorName(visitor)}</span>
                                   <span className="text-xs opacity-80">+{POINTS_PER_VISITOR}</span>
                                 </span>
                               ))}
@@ -205,7 +207,7 @@ const Visitantes = () => {
                                 >
                                   <div className="flex items-center gap-2">
                                     <UserPlus className="w-4 h-4 text-accent" />
-                                    <span className="font-medium">{visitor}</span>
+                                    <span className="font-medium">{getVisitorName(visitor)}</span>
                                   </div>
                                   <span className="text-sm text-accent font-semibold">+{POINTS_PER_VISITOR} pts</span>
                                 </div>

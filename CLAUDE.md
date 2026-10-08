@@ -117,6 +117,8 @@ The application uses a custom "Royal Theme" design system with:
 // VerseRecord can be a plain string (legacy) or an object:
 type VerseRecord = string | {
   ref: string;            // Verse reference (e.g., "Jo 3:16")
+  version?: string;       // Version the boy recited: NVI, ARA, NAA, ARC, Manual... (points use THIS text)
+  versionPending?: boolean; // true = version not confirmed yet (site shows "NVI?")
   addedAt?: string;       // ISO timestamp — REQUIRED for new verses (delta calculation depends on it)
   suspended?: boolean;    // true = verse temporarily removed from scoring
   suspendedAt?: string;   // ISO timestamp of when it was suspended
@@ -128,9 +130,13 @@ type VerseRecord = string | {
 - To **suspend** a verse (boy couldn't recite it), add `"suspended": true` and `"suspendedAt"`. Points are deducted, but the verse stays in the list for later restoration.
 - To **restore** a suspended verse, remove `"suspended"` and `"suspendedAt"` (or set `"suspended": false`).
 
+Participants also carry `visitors` (`{ name, addedAt }`), `attendance` (`{ date, type, addedAt }`),
+`exams` (`{ lesson, grade, date, addedAt }` — a retake is just another record, best grade counts) and
+`lessonItems` (`{ lesson, item, date, addedAt }`, item ids from `lessons.json`).
+
 ```
 // NEW verse (correct):
-{ "ref": "Jo 3:16", "addedAt": "2026-02-18T12:00:00.000Z" }
+{ "ref": "Jo 3:16", "version": "ARA", "addedAt": "2026-02-18T12:00:00.000Z" }
 
 // NEW verse (WRONG — delta arrows won't work):
 "Jo 3:16"
@@ -197,11 +203,24 @@ The project includes a script to fetch Bible verses from the YouVersion API:
 - Reference formats: "Jo 3:16" (single verse), "1Co 13:4-8" (verse range)
 
 ### Points Calculation
-Verses are worth different points based on word count:
-- **< 20 words**: 25 points
-- **≥ 20 words**: 35 points
+All scoring lives in `src/lib/calculatePoints.ts` (`calculateParticipantPoints`, `scoreVerseRecord`).
+Verses are scored verse by verse (ranges expanded), by word count **of the version the boy recited**:
+- **< 20 words**: 25 points, **≥ 20 words**: 35 points
+- Required verse of a Manual lesson: × `multipliers.lesson` (2); challenge verse: × `multipliers.challenge` (3)
+- If the recited version's text is missing, the default version's word count is used
 
-This calculation is implemented in `src/pages/Versiculos.tsx` with the `calculateVersePoints()` helper function.
+The viewer's version toggle never changes points. The delta (up arrow) is `total(now) − total(records before pointsAsOf)`.
+
+### Manual do Candidato (`lessons.json`)
+`configs/royal-ambassadors/data/lessons.json` defines each lesson: required `verses`, optional `challenge`
+verses (each `{ ref, version }` with the notebook version), `items` (`{ id, label, points }`) and `exam`.
+Shared values: `multipliers` and `exam` (`pointsPerGrade` 5, `maxGrade` 10, `passGrade` 7, `retakes` 1).
+The `/manual` page shows each boy's progress per lesson.
+
+### Hand-entered verse texts (`verse-texts.json`)
+The YouVersion key only serves NVI/NBV/BLT/ptNVI/O Livro. Texts for ARC, ARA, NAA and the printed Manual go in
+`configs/royal-ambassadors/data/verse-texts.json`, copied **exactly** from bible.com (ARC 212, ARA 1608, NAA 1840;
+bible.com blocks curl — use a browser). `fetch-verses.js` merges them into `verses.json` with word counts.
 
 ### Versiculos Page Features
 - **Search**: Filter participants by name
@@ -209,8 +228,8 @@ This calculation is implemented in `src/pages/Versiculos.tsx` with the `calculat
   - **Compact**: Shows verse references as clickable pills with points (e.g., "Jo 3:16 +35")
   - **Expanded**: Accordion view with full verse text, word count, and points
   - **All Verses**: Shows all unique verses memorized across all participants
-- **Version Toggle**: Switch between Bible versions (NVI, BLT, etc.)
-- **Total Points Display**: Shows total points from memorized verses per participant
+- **Per-boy views**: each verse shows the boy's version badge (dashed "NVI?" = pending) and lesson badge ("T2 ×2")
+- **Version Toggle**: only in "Todos Versículos", for reading; does not affect points
 
 ## Environment Variables
 
@@ -260,22 +279,27 @@ The project deploys automatically to GitHub Pages via `.github/workflows/deploy.
 - Component props should include TypeScript interfaces
 
 ### Updating Leaderboard Data
-Modify `public/data/leaderboard.json` directly. The sorting logic is in `useLeaderboardData.ts:46-51`:
+**Source of truth is `configs/royal-ambassadors/data/`** — `npm run setup-config` (run by `dev`/`build`) copies it over
+`public/data/`. Edit the configs file, then run `npm run setup-config`. Data entry is done by Claude from Andre's notes
+(WhatsApp "Tasks" group or chat); there is no admin panel. Previous seasons are preserved as git tags (e.g. `gincana-2026-1`).
+
+Ranking sort (in `useLeaderboardData.ts`):
 - Primary sort: Points (descending)
 - Secondary sort: Name (alphabetical, locale-aware)
 
 ### Adding Memorized Verses
-1. Add new verses using the **object format with `addedAt`** (NEVER as plain strings):
+1. Add new verses using the **object format with `version` and `addedAt`** (NEVER as plain strings):
    ```json
-   { "ref": "Jo 3:16", "addedAt": "2026-02-18T12:00:00.000Z" }
+   { "ref": "Jo 3:16", "version": "ARA", "addedAt": "2026-02-18T12:00:00.000Z" }
    ```
+   If the version is not ARC/ARA/NAA text already in `verse-texts.json` or an API version, add the exact text there.
 2. To suspend a verse the boy couldn't recite:
    ```json
    { "ref": "Jo 3:16", "addedAt": "...", "suspended": true, "suspendedAt": "2026-02-18T12:00:00.000Z" }
    ```
 3. Run `npm run fetch-verses` to fetch verse text from YouVersion API
 4. Verses will appear on the `/versiculos` page with automatic points calculation
-5. Always sync: `cp public/data/leaderboard.json configs/royal-ambassadors/data/leaderboard.json`
+5. Edit `configs/royal-ambassadors/data/leaderboard.json` and run `npm run setup-config` to sync `public/data/`
 
 ### Adding Icons to Rules
 Rules can display custom icons from lucide-react. To add a new icon to a rule:
@@ -309,38 +333,9 @@ Insert routes in `src/App.tsx` BEFORE the `<Route path="*" element={<NotFound />
 - Access theme colors via Tailwind (e.g., `bg-primary`, `text-accent`)
 - Gold shadows available: `shadow-gold`, `shadow-card`, `shadow-elevated`
 
-## Admin Panel
+## Data Entry
 
-A local development tool for managing participant data without manually editing JSON files. Only available during development (`npm run dev`).
-
-### Starting the Admin Panel
-Running `npm run dev` starts both the Vite dev server and the Express API server (port 3001). Access the admin panel at `/admin`.
-
-### Architecture
-- **API Server**: `server/index.js` (Express, port 3001)
-- **Data Storage**: Writes to `public/data/leaderboard.json`
-- **Git Sync**: Also syncs to `configs/royal-ambassadors/data/leaderboard.json` for version control
-- **Frontend**: React page at `/admin` route consuming the API
-
-### Tabs
-
-| Tab | Purpose |
-|-----|---------|
-| **Presenca** | Add attendance, verses, and visitors to participants. Select participants with checkboxes, choose date/type, then click "Adicionar Presenca". Use "Vers" and "Visit" buttons for individual actions. |
-| **Historico** | View and delete past activities (attendance records, verses, visitors). |
-| **Config** | Configure `pointsAsOf` date for historical point comparisons. |
-
-### Input Formats
-
-**Verses**: Supports comma-separated input for adding multiple verses at once.
-- Single: `Jo 3:16`
-- Multiple: `Jo 3:16, Sl 23:1, 1Co 13:4`
-
-**Visitors**: Enter visitor name (single entry).
-
-**Attendance Types**:
-- `embaixada` - Embassy meeting
-- `culto` - Worship service
+No admin panel. Claude edits the JSON in `configs/royal-ambassadors/data/` from Andre's notes.
 
 ### Verse Reference Format
 Use Portuguese abbreviations: `Jo` (John), `Sl` (Psalms), `1Co` (1 Corinthians), etc.

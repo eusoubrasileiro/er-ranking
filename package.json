@@ -7,7 +7,6 @@
     "setup-config": "node scripts/setup-config.js",
     "dev": "APP_CONFIG=royal-ambassadors npm run setup-config && vite",
     "fetch-verses": "node scripts/fetch-verses.js",
-    "snapshot": "node scripts/snapshot-points.js",
     "build:er": "APP_CONFIG=royal-ambassadors npm run setup-config && npm run fetch-verses && vite build",
     "build": "npm run build:er",
     "build:dev": "npm run fetch-verses && vite build --mode development",

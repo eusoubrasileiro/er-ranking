@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import { calculateParticipantPoints, calculateDeltaPoints, type VerseRecord } from '@/lib/calculatePoints';
+import { calculateParticipantPoints, calculateDeltaPoints, type VerseRecord, type VisitorRecord, type ScoringContext } from '@/lib/calculatePoints';
 import type { GamesData } from '@/hooks/useGamesData';
 import type { BonusData } from '@/hooks/useBonusData';
+import type { LessonsData } from '@/hooks/useLessonsData';
 
 export interface Rule {
   id: number;
@@ -9,6 +10,7 @@ export interface Rule {
   points: number;
   icon?: string;
   explanation?: string;
+  display?: string;       // Badge text instead of "+points" (e.g. "2×", "até 50")
   activityType?: string;  // Maps to attendance record types (e.g., "embaixada", "igreja", "quarto", "cozinha")
 }
 
@@ -18,10 +20,20 @@ export interface AttendanceRecord {
   type: string;        // Activity type (e.g., "embaixada", "igreja", "quarto", "cozinha", "banheiro", "fora")
 }
 
-export interface CandidatoProgress {
-  prerequisites?: boolean;      // 55pts when true (1 task)
-  manualTasks?: number;         // 0-10, each task = 55pts (10 tasks in Manual do Candidato)
-  addedAt?: string;             // ISO timestamp for delta calculation
+// Written exam of a Manual do Candidato lesson (a retake is just another record)
+export interface ExamRecord {
+  lesson: number;
+  grade: number;   // 0-10
+  date: string;
+  addedAt?: string;
+}
+
+// Completed non-verse item of a lesson (e.g. "tema-compromisso-hino")
+export interface LessonItemRecord {
+  lesson: number;
+  item: string;
+  date: string;
+  addedAt?: string;
 }
 
 export interface DisciplineRecord {
@@ -59,9 +71,10 @@ export interface Participant {
   startPoints?: number;  // Baseline points from before tracking system
   points?: number;       // Legacy field - ignored when computing
   memorizedVerses?: VerseRecord[];
-  visitors?: string[];
+  visitors?: VisitorRecord[];
   attendance?: AttendanceRecord[];
-  candidatoProgress?: CandidatoProgress;
+  exams?: ExamRecord[];
+  lessonItems?: LessonItemRecord[];
   disciplines?: DisciplineRecord[];
   sermonNotes?: SermonNoteRecord[];
   previousPoints?: number;      // Points at last snapshot
@@ -94,6 +107,7 @@ export interface LeaderboardData {
   versesData?: VersesData;
   gamesData?: GamesData;
   bonusData?: BonusData;
+  lessonsData?: LessonsData;
 }
 
 export function useLeaderboardData() {
@@ -104,12 +118,13 @@ export function useLeaderboardData() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [leaderboardResponse, rulesResponse, versesResponse, gamesResponse, bonusResponse] = await Promise.all([
+        const [leaderboardResponse, rulesResponse, versesResponse, gamesResponse, bonusResponse, lessonsResponse] = await Promise.all([
           fetch(`${import.meta.env.BASE_URL}data/leaderboard.json`),
           fetch(`${import.meta.env.BASE_URL}data/rules.json`),
           fetch(`${import.meta.env.BASE_URL}data/verses.json`),
           fetch(`${import.meta.env.BASE_URL}data/games.json`),
-          fetch(`${import.meta.env.BASE_URL}data/bonus.json`)
+          fetch(`${import.meta.env.BASE_URL}data/bonus.json`),
+          fetch(`${import.meta.env.BASE_URL}data/lessons.json`)
         ]);
 
         if (!leaderboardResponse.ok || !rulesResponse.ok) {
@@ -139,12 +154,19 @@ export function useLeaderboardData() {
           bonusData = await bonusResponse.json();
         }
 
+        // Lessons data is optional - app should work without it
+        let lessonsData: LessonsData | undefined;
+        if (lessonsResponse.ok) {
+          lessonsData = await lessonsResponse.json();
+        }
+
         setData({
           ...leaderboardData,
           rules: rulesData.rules,
           versesData,
           gamesData,
-          bonusData
+          bonusData,
+          lessonsData
         });
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Erro desconhecido');
@@ -157,29 +179,22 @@ export function useLeaderboardData() {
   }, []);
 
   // Compute points for each participant from their activity records
+  const scoringContext: ScoringContext = {
+    rules: data?.rules ?? [],
+    versesData: data?.versesData,
+    lessonsData: data?.lessonsData,
+    gamesData: data?.gamesData,
+    bonusData: data?.bonusData,
+  };
+
   const sortedParticipants: ParticipantWithPoints[] = (data?.participants ?? [])
     .map(participant => {
-      const currentPoints = calculateParticipantPoints(
-        participant,
-        data?.rules ?? [],
-        data?.versesData,
-        data?.versesData?.defaultVersion ?? 'NVI',
-        data?.gamesData,
-        data?.bonusData
-      );
+      const currentPoints = calculateParticipantPoints(participant, scoringContext);
       // Calculate delta based on pointsAsOf date (if set)
       // Falls back to previousPoints comparison for backwards compatibility
       let pointsDelta: number | undefined;
       if (data?.pointsAsOf) {
-        pointsDelta = calculateDeltaPoints(
-          participant,
-          data?.rules ?? [],
-          data.pointsAsOf,
-          data?.versesData,
-          data?.versesData?.defaultVersion ?? 'NVI',
-          data?.gamesData,
-          data?.bonusData
-        );
+        pointsDelta = calculateDeltaPoints(participant, scoringContext, data.pointsAsOf);
         // Only show delta if > 0
         if (pointsDelta === 0) pointsDelta = undefined;
       } else if (participant.previousPoints !== undefined) {
@@ -196,5 +211,5 @@ export function useLeaderboardData() {
       return a.name.localeCompare(b.name);
     });
 
-  return { data, loading, error, sortedParticipants };
+  return { data, loading, error, sortedParticipants, scoringContext };
 }

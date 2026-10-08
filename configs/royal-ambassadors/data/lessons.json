@@ -1,0 +1,31 @@
+{
+  "multipliers": { "lesson": 2, "challenge": 3 },
+  "exam": { "pointsPerGrade": 5, "maxGrade": 10, "passGrade": 7, "retakes": 1 },
+  "lessons": [
+    {
+      "id": 1,
+      "title": "Requisitos Mínimos",
+      "verses": [{ "ref": "2Co 5:20", "version": "Manual" }],
+      "challenge": [],
+      "items": [{ "id": "tema-compromisso-hino", "label": "Tema, Compromisso e Hino", "points": 55 }],
+      "exam": true
+    },
+    {
+      "id": 2,
+      "title": "O Plano de Salvação",
+      "verses": [{ "ref": "Rm 3:23", "version": "ARC" }, { "ref": "Jo 3:16", "version": "ARC" }],
+      "challenge": [{ "ref": "Mt 10:32-33", "version": "ARC" }],
+      "items": [],
+      "exam": true
+    },
+    {
+      "id": 3,
+      "title": "Declaração dos ER",
+      "verses": [],
+      "challenge": [],
+      "items": [],
+      "exam": true,
+      "note": "Versículos a definir"
+    }
+  ]
+}

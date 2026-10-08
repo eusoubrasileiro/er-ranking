@@ -60,7 +60,7 @@ const dataDir = join(configDir, 'data');
 if (existsSync(dataDir)) {
   mkdirSync(publicDataDir, { recursive: true });
 
-  const dataFiles = ['leaderboard.json', 'rules.json', 'games.json', 'bonus.json'];
+  const dataFiles = ['leaderboard.json', 'rules.json', 'games.json', 'bonus.json', 'lessons.json', 'verse-texts.json'];
   dataFiles.forEach(file => {
     const src = join(dataDir, file);
     if (existsSync(src)) {

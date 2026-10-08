@@ -20,6 +20,7 @@ export interface AppConfig {
   routes: {
     home: RouteConfig;
     verses?: RouteConfig;
+    manual?: RouteConfig;
     visitors?: RouteConfig;
     games?: RouteConfig;
     attendance?: RouteConfig;

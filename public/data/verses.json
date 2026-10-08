@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-18T18:52:10.795Z",
+  "generatedAt": "2026-10-08T19:02:27.630Z",
   "defaultVersion": "NVI",
   "versions": {
     "NVI": {
@@ -11,9 +11,49 @@
       "id": 1966,
       "name": "Nova Bíblia Viva",
       "fullTitle": "Nova Bíblia Viva"
+    },
+    "ARC": {
+      "id": 212,
+      "name": "Almeida Revista e Corrigida",
+      "fullTitle": "Almeida Revista e Corrigida"
+    },
+    "ARA": {
+      "id": 1608,
+      "name": "Almeida Revista e Atualizada",
+      "fullTitle": "Almeida Revista e Atualizada"
+    },
+    "NAA": {
+      "id": 1840,
+      "name": "Nova Almeida Atualizada",
+      "fullTitle": "Nova Almeida Atualizada"
+    },
+    "Manual": {
+      "id": 0,
+      "name": "Texto do Manual do Candidato",
+      "fullTitle": "Texto do Manual do Candidato"
     }
   },
   "verses": {
+    "Rm 3:23": {
+      "NVI": {
+        "reference": "Romanos 3:23",
+        "text": "pois todos pecaram e estão destituídos da glória de Deus,",
+        "wordCount": 10,
+        "youversionUrl": "https://www.bible.com/pt/bible/129/ROM.3.23"
+      },
+      "NBV": {
+        "reference": "Romanos 3:23",
+        "text": "Pois todos pecaram; todos fracassaram, e estão afastados da glória de Deus;",
+        "wordCount": 12,
+        "youversionUrl": "https://www.bible.com/pt/bible/1966/ROM.3.23"
+      },
+      "ARC": {
+        "reference": "Romanos 3:23",
+        "text": "Porque todos pecaram e destituídos estão da glória de Deus",
+        "wordCount": 10,
+        "youversionUrl": "https://www.bible.com/pt/bible/212/ROM.3.23.ARC"
+      }
+    },
     "Jo 3:16": {
       "NVI": {
         "reference": "João 3:16",
@@ -26,6 +66,12 @@
         "text": "Porque Deus amou tanto o mundo que deu o seu Filho único para que todo aquele que crer nele não pereça, mas tenha a vida eterna.",
         "wordCount": 26,
         "youversionUrl": "https://www.bible.com/pt/bible/1966/JHN.3.16"
+      },
+      "ARC": {
+        "reference": "João 3:16",
+        "text": "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna.",
+        "wordCount": 28,
+        "youversionUrl": "https://www.bible.com/pt/bible/212/JHN.3.16.ARC"
       }
     },
     "Sl 23:1": {
@@ -40,174 +86,12 @@
         "text": "O Senhor é o meu pastor. Ele me dá tudo de que preciso!",
         "wordCount": 13,
         "youversionUrl": "https://www.bible.com/pt/bible/1966/PSA.23.1"
-      }
-    },
-    "Jo 14:6": {
-      "NVI": {
-        "reference": "João 14:6",
-        "text": "Jesus respondeu: ― Eu sou o caminho, a verdade e a vida. Ninguém vem ao Pai, a não ser por mim.",
-        "wordCount": 20,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/JHN.14.6"
       },
-      "NBV": {
-        "reference": "João 14:6",
-        "text": "Jesus disse: “Eu sou o Caminho, a Verdade e a Vida. Ninguém pode chegar ao Pai, a não ser por mim.",
-        "wordCount": 21,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/JHN.14.6"
-      }
-    },
-    "Fp 4:13": {
-      "NVI": {
-        "reference": "Filipenses 4:13",
-        "text": "Tudo posso naquele que me fortalece.",
-        "wordCount": 6,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/PHP.4.13"
-      },
-      "NBV": {
-        "reference": "Filipenses 4:13",
-        "text": "eu posso fazer todas as coisas que Deus me pede com a força que Cristo me dá.",
-        "wordCount": 17,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/PHP.4.13"
-      }
-    },
-    "2 Pe 1:21": {
-      "NVI": {
-        "reference": "2Pedro 1:21",
-        "text": "pois jamais a profecia teve origem na vontade humana, mas homensfalaram da parte de Deus, guiados pelo Espírito Santo.",
-        "wordCount": 19,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/2PE.1.21"
-      },
-      "NBV": {
-        "reference": "2 Pedro 1:21",
-        "text": "Porque jamais uma profecia veio da vontade humana. Foi o Espírito Santo quem lhes concedeu mensagens verdadeiras da parte de Deus.",
-        "wordCount": 21,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/2PE.1.21"
-      }
-    },
-    "Sl 119:11": {
-      "NVI": {
-        "reference": "Salmos 119:11",
-        "text": "Guardei no coração a tua palavra para não pecar contra ti.",
-        "wordCount": 11,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/PSA.119.11"
-      },
-      "NBV": {
-        "reference": "Salmos 119:11",
-        "text": "Suas palavras estão sempre presentes em meu coração para não pecar contra o Senhor.",
-        "wordCount": 14,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/PSA.119.11"
-      }
-    },
-    "Mt 6:9": {
-      "NVI": {
-        "reference": "Mateus 6:9",
-        "text": "Vocês devem orar assim: “Pai nosso, que estás nos céus! Santificado seja o teu nome.",
-        "wordCount": 15,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/MAT.6.9"
-      },
-      "NBV": {
-        "reference": "Mateus 6:9",
-        "text": "Orem desta maneira: “ ‘Nosso Pai do céu, seja santificado o seu nome.",
-        "wordCount": 12,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/MAT.6.9"
-      }
-    },
-    "Mt 6:10": {
-      "NVI": {
-        "reference": "Mateus 6:10",
-        "text": "Venha o teu reino; seja feita a tua vontade na terra como no céu.",
-        "wordCount": 14,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/MAT.6.10"
-      },
-      "NBV": {
-        "reference": "Mateus 6:10",
-        "text": "Venha o seu reino. Que a sua vontade seja feita aqui na terra, como é feita no céu.",
-        "wordCount": 18,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/MAT.6.10"
-      }
-    },
-    "Mt 6:11": {
-      "NVI": {
-        "reference": "Mateus 6:11",
-        "text": "Dá‑nos hoje o pão nosso de cada dia.",
+      "NAA": {
+        "reference": "Salmos 23:1",
+        "text": "O SENHOR é o meu pastor; nada me faltará.",
         "wordCount": 9,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/MAT.6.11"
-      },
-      "NBV": {
-        "reference": "Mateus 6:11",
-        "text": "Dê-nos hoje, novamente, o nosso alimento.",
-        "wordCount": 7,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/MAT.6.11"
-      }
-    },
-    "Mt 6:12": {
-      "NVI": {
-        "reference": "Mateus 6:12",
-        "text": "Perdoa as nossas ofensas, como também temos perdoado aqueles que nos ofendem.",
-        "wordCount": 12,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/MAT.6.12"
-      },
-      "NBV": {
-        "reference": "Mateus 6:12",
-        "text": "Perdoe-nos as nossas ofensas, tal como nós temos perdoado aqueles que nos ofenderam.",
-        "wordCount": 14,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/MAT.6.12"
-      }
-    },
-    "Mt 6:13": {
-      "NVI": {
-        "reference": "Mateus 6:13",
-        "text": "E não nos deixes cair em tentação, mas livra‑nos do Maligno, pois teu é o reino, o poder e a glória para sempre. Amém”.",
-        "wordCount": 25,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/MAT.6.13"
-      },
-      "NBV": {
-        "reference": "Mateus 6:13",
-        "text": "Não nos deixe cair em tentação, mas livre-nos do Maligno. Amém!’",
-        "wordCount": 12,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/MAT.6.13"
-      }
-    },
-    "Sl 91:1": {
-      "NVI": {
-        "reference": "Salmos 91:1",
-        "text": "Aquele que habita no abrigo do Altíssimo descansará à sombra do Todo-poderoso.",
-        "wordCount": 13,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/PSA.91.1"
-      },
-      "NBV": {
-        "reference": "Salmos 91:1",
-        "text": "Aquele que vive protegido pelo Altíssimo, guardado pelo Todo-poderoso,",
-        "wordCount": 10,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/PSA.91.1"
-      }
-    },
-    "Jó 3:2": {
-      "NVI": {
-        "reference": "Jó 3:2",
-        "text": "Ele disse:",
-        "wordCount": 2,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/JOB.3.2"
-      },
-      "NBV": {
-        "reference": "Jó 3:2",
-        "text": "Jó disse:",
-        "wordCount": 2,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/JOB.3.2"
-      }
-    },
-    "Jo 11:35": {
-      "NVI": {
-        "reference": "João 11:35",
-        "text": "Jesus chorou.",
-        "wordCount": 2,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/JHN.11.35"
-      },
-      "NBV": {
-        "reference": "João 11:35",
-        "text": "Jesus chorou.",
-        "wordCount": 2,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/JHN.11.35"
+        "youversionUrl": "https://www.bible.com/pt/bible/1840/PSA.23.1.NAA"
       }
     },
     "Sl 23:2": {
@@ -224,46 +108,94 @@
         "youversionUrl": "https://www.bible.com/pt/bible/1966/PSA.23.2"
       }
     },
-    "Jo 1:1": {
+    "Sl 119:11": {
       "NVI": {
-        "reference": "João 1:1",
-        "text": "No princípio era a Palavra, e a Palavra estava com Deus e a Palavra era Deus.",
-        "wordCount": 16,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/JHN.1.1"
+        "reference": "Salmos 119:11",
+        "text": "Guardei no coração a tua palavra para não pecar contra ti.",
+        "wordCount": 11,
+        "youversionUrl": "https://www.bible.com/pt/bible/129/PSA.119.11"
       },
       "NBV": {
-        "reference": "João 1:1",
-        "text": "No princípio era aquele que é a Palavra, e ele estava com Deus e era Deus.",
-        "wordCount": 16,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/JHN.1.1"
+        "reference": "Salmos 119:11",
+        "text": "Suas palavras estão sempre presentes em meu coração para não pecar contra o Senhor.",
+        "wordCount": 14,
+        "youversionUrl": "https://www.bible.com/pt/bible/1966/PSA.119.11"
       }
     },
-    "Sl 132:1": {
+    "Sl 48:1": {
       "NVI": {
-        "reference": "Salmos 132:1",
-        "text": "Senhor, lembra‑te de Davi e das dificuldades que enfrentou.",
-        "wordCount": 10,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/PSA.132.1"
+        "reference": "Salmos 48:1",
+        "text": "Grande é o Senhor e digno de todo louvor na cidade do nosso Deus, o seu santo monte.",
+        "wordCount": 18,
+        "youversionUrl": "https://www.bible.com/pt/bible/129/PSA.48.1"
       },
       "NBV": {
-        "reference": "Salmos 132:1",
-        "text": "Ó Senhor, lembre-se de mim de todas as humilhações por que passei!",
+        "reference": "Salmos 48:1",
+        "text": "O Senhor é grande e merece ser louvado na cidade do nosso Deus.",
         "wordCount": 13,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/PSA.132.1"
+        "youversionUrl": "https://www.bible.com/pt/bible/1966/PSA.48.1"
       }
     },
-    "Sl 132:2": {
+    "Fp 4:13": {
       "NVI": {
-        "reference": "Salmos 132:2",
-        "text": "Ele jurou ao Senhor e fez um voto ao Poderoso de Jacó:",
-        "wordCount": 12,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/PSA.132.2"
+        "reference": "Filipenses 4:13",
+        "text": "Tudo posso naquele que me fortalece.",
+        "wordCount": 6,
+        "youversionUrl": "https://www.bible.com/pt/bible/129/PHP.4.13"
       },
       "NBV": {
-        "reference": "Salmos 132:2",
-        "text": "Lembre-se de como prometi solenemente ao Senhor, o Poderoso de Israel:",
-        "wordCount": 12,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/PSA.132.2"
+        "reference": "Filipenses 4:13",
+        "text": "eu posso fazer todas as coisas que Deus me pede com a força que Cristo me dá.",
+        "wordCount": 17,
+        "youversionUrl": "https://www.bible.com/pt/bible/1966/PHP.4.13"
+      }
+    },
+    "Mt 28:19": {
+      "NVI": {
+        "reference": "Mateus 28:19",
+        "text": "Portanto, vão e façam discípulos de todas as nações, batizando‑os em nome do Pai, do Filho e do Espírito Santo,",
+        "wordCount": 21,
+        "youversionUrl": "https://www.bible.com/pt/bible/129/MAT.28.19"
+      },
+      "NBV": {
+        "reference": "Mateus 28:19",
+        "text": "Portanto, vão e façam discípulos de todas as nações, batizando-os no nome do Pai, do Filho e do Espírito Santo,",
+        "wordCount": 21,
+        "youversionUrl": "https://www.bible.com/pt/bible/1966/MAT.28.19"
+      },
+      "ARC": {
+        "reference": "Mateus 28:19",
+        "text": "Portanto, ide, ensinai todas as nações, batizando-as em nome do Pai, e do Filho, e do Espírito Santo",
+        "wordCount": 19,
+        "youversionUrl": "https://www.bible.com/pt/bible/212/MAT.28.19.ARC"
+      }
+    },
+    "Jó 22:1": {
+      "NVI": {
+        "reference": "Jó 22:1",
+        "text": "Então, Elifaz, de Temã, respondeu:",
+        "wordCount": 5,
+        "youversionUrl": "https://www.bible.com/pt/bible/129/JOB.22.1"
+      },
+      "NBV": {
+        "reference": "Jó 22:1",
+        "text": "Então Elifaz, o temanita, respondeu pela terceira vez:",
+        "wordCount": 8,
+        "youversionUrl": "https://www.bible.com/pt/bible/1966/JOB.22.1"
+      }
+    },
+    "Jó 20:1": {
+      "NVI": {
+        "reference": "Jó 20:1",
+        "text": "Então, Zofar, de Naamate, respondeu:",
+        "wordCount": 5,
+        "youversionUrl": "https://www.bible.com/pt/bible/129/JOB.20.1"
+      },
+      "NBV": {
+        "reference": "Jó 20:1",
+        "text": "Então Zofar, o naamatita, respondeu pela segunda vez:",
+        "wordCount": 8,
+        "youversionUrl": "https://www.bible.com/pt/bible/1966/JOB.20.1"
       }
     },
     "Gn 1:1": {
@@ -278,90 +210,26 @@
         "text": "No princípio Deus criou os céus e a terra.",
         "wordCount": 9,
         "youversionUrl": "https://www.bible.com/pt/bible/1966/GEN.1.1"
+      },
+      "NAA": {
+        "reference": "Gênesis 1:1",
+        "text": "No princípio, Deus criou os céus e a terra.",
+        "wordCount": 9,
+        "youversionUrl": "https://www.bible.com/pt/bible/1840/GEN.1.1.NAA"
       }
     },
-    "Sl 1:1": {
+    "Jó 3:2": {
       "NVI": {
-        "reference": "Salmos 1:1",
-        "text": "Bem-aventurado aquele que não anda segundo o conselho dos ímpios, não se detém no caminho dos pecadores nem se assenta na companhia dos zombadores.",
-        "wordCount": 25,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/PSA.1.1"
+        "reference": "Jó 3:2",
+        "text": "Ele disse:",
+        "wordCount": 2,
+        "youversionUrl": "https://www.bible.com/pt/bible/129/JOB.3.2"
       },
       "NBV": {
-        "reference": "Salmos 1:1",
-        "text": "Como é feliz o homem que não vai atrás da opinião de pessoas más, que não segue o exemplo dos pecadores, nem participa de rodinhas dos que zombam de Deus.",
-        "wordCount": 30,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/PSA.1.1"
-      }
-    },
-    "Sl 1:2": {
-      "NVI": {
-        "reference": "Salmos 1:2",
-        "text": "Ao contrário, a sua satisfação está na lei do Senhor, e na sua lei medita dia e noite.",
-        "wordCount": 18,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/PSA.1.2"
-      },
-      "NBV": {
-        "reference": "Salmos 1:2",
-        "text": "Pelo contrário, ele faz da lei do Senhor a fonte da sua alegria. De dia e de noite ele medita nessa lei e fica imaginando como pode obedecer ao Senhor mais de perto.",
-        "wordCount": 33,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/PSA.1.2"
-      }
-    },
-    "Sl 1:3": {
-      "NVI": {
-        "reference": "Salmos 1:3",
-        "text": "É como árvore plantada junto a ribeiros: dá fruto no tempo certo e as suas folhas não murcham. Tudo o que ele faz prospera.",
-        "wordCount": 24,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/PSA.1.3"
-      },
-      "NBV": {
-        "reference": "Salmos 1:3",
-        "text": "Ele é como uma árvore plantada junto à margem de um rio. Nunca deixa de dar fruto na estação própria. E as suas folhas nunca murcham, e ele tem sucesso em todas as suas atividades.",
-        "wordCount": 35,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/PSA.1.3"
-      }
-    },
-    "Sl 1:4": {
-      "NVI": {
-        "reference": "Salmos 1:4",
-        "text": "Não é o caso dos ímpios! São como palha que o vento leva.",
-        "wordCount": 13,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/PSA.1.4"
-      },
-      "NBV": {
-        "reference": "Salmos 1:4",
-        "text": "Mas os homens maus vivem sem direção e sem segurança, como a palha que é levada pelo vento.",
-        "wordCount": 18,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/PSA.1.4"
-      }
-    },
-    "Sl 1:5": {
-      "NVI": {
-        "reference": "Salmos 1:5",
-        "text": "Por isso, os ímpios não resistirão no julgamento nem os pecadores na comunidade dos justos.",
-        "wordCount": 15,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/PSA.1.5"
-      },
-      "NBV": {
-        "reference": "Salmos 1:5",
-        "text": "Por isso, no dia do julgamento preparado por Deus, eles serão condenados. Os maus não terão lugar entre os que obedecem a Deus.",
-        "wordCount": 23,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/PSA.1.5"
-      }
-    },
-    "Sl 1:6": {
-      "NVI": {
-        "reference": "Salmos 1:6",
-        "text": "Porque o Senhor conhece o caminho dos justos, mas o caminho dos ímpios leva à destruição!",
-        "wordCount": 16,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/PSA.1.6"
-      },
-      "NBV": {
-        "reference": "Salmos 1:6",
-        "text": "O Senhorconhece e aprova a vida dos que obedecem às suas leis, mas a vida dos maus acaba em desgraça e destruição.",
-        "wordCount": 22,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/PSA.1.6"
+        "reference": "Jó 3:2",
+        "text": "Jó disse:",
+        "wordCount": 2,
+        "youversionUrl": "https://www.bible.com/pt/bible/1966/JOB.3.2"
       }
     },
     "Sl 119:103": {
@@ -376,230 +244,146 @@
         "text": "As suas palavras são doces, mais doces do que o mel para a minha boca!",
         "wordCount": 15,
         "youversionUrl": "https://www.bible.com/pt/bible/1966/PSA.119.103"
+      },
+      "ARA": {
+        "reference": "Salmos 119:103",
+        "text": "Quão doces são as tuas palavras ao meu paladar! Mais que o mel à minha boca.",
+        "wordCount": 16,
+        "youversionUrl": "https://www.bible.com/pt/bible/1608/PSA.119.103.ARA"
       }
     },
-    "Sl 32:8": {
+    "Mt 18:19": {
       "NVI": {
-        "reference": "Salmos 32:8",
-        "text": "Eu o instruirei e lhe ensinarei no caminho que você deve seguir; eu o aconselharei e cuidarei de você.",
-        "wordCount": 19,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/PSA.32.8"
+        "reference": "Mateus 18:19",
+        "text": "― Em verdade também lhes digo que, se dois de vocês concordarem na terra em qualquer assunto sobre o qual pedirem, isso será feito a vocês por meu Pai, que está nos céus.",
+        "wordCount": 32,
+        "youversionUrl": "https://www.bible.com/pt/bible/129/MAT.18.19"
       },
       "NBV": {
-        "reference": "Salmos 32:8",
-        "text": "Eu o instruirei e o ensinarei — diz o Senhor — e mostrarei a você o caminho por onde deve andar. Eu mesmo lhe darei conselhos e o vigiarei.",
-        "wordCount": 27,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/PSA.32.8"
+        "reference": "Mateus 18:19",
+        "text": "“Eu lhes digo isto também: Se dois de vocês concordarem aqui na terra a respeito de qualquer assunto sobre o qual pedirem, isso será feito por meu Pai que está nos céus.",
+        "wordCount": 32,
+        "youversionUrl": "https://www.bible.com/pt/bible/1966/MAT.18.19"
+      },
+      "ARA": {
+        "reference": "Mateus 18:19",
+        "text": "Em verdade também vos digo que, se dois dentre vós, sobre a terra, concordarem a respeito de qualquer coisa que, porventura, pedirem, ser-lhes-á concedida por meu Pai, que está nos céus.",
+        "wordCount": 33,
+        "youversionUrl": "https://www.bible.com/pt/bible/1608/MAT.18.19.ARA"
       }
     },
-    "Sl 32:9": {
+    "Mt 5:5": {
       "NVI": {
-        "reference": "Salmos 32:9",
-        "text": "Não sejam como o cavalo ou o burro, que não têm entendimento, mas precisam ser controlados com freios e rédeas; caso contrário, não obedecem.",
+        "reference": "Mateus 5:5",
+        "text": "Bem-aventurados os humildes, pois receberão a terra por herança.",
+        "wordCount": 10,
+        "youversionUrl": "https://www.bible.com/pt/bible/129/MAT.5.5"
+      },
+      "NBV": {
+        "reference": "Mateus 5:5",
+        "text": "Felizes são os mansos, porque receberão a terra por herança.",
+        "wordCount": 10,
+        "youversionUrl": "https://www.bible.com/pt/bible/1966/MAT.5.5"
+      },
+      "NAA": {
+        "reference": "Mateus 5:5",
+        "text": "— Bem-aventurados os mansos, porque herdarão a terra.",
+        "wordCount": 8,
+        "youversionUrl": "https://www.bible.com/pt/bible/1840/MAT.5.5.NAA"
+      }
+    },
+    "Mt 5:4": {
+      "NVI": {
+        "reference": "Mateus 5:4",
+        "text": "Bem-aventurados os que choram, pois serão consolados.",
+        "wordCount": 8,
+        "youversionUrl": "https://www.bible.com/pt/bible/129/MAT.5.4"
+      },
+      "NBV": {
+        "reference": "Mateus 5:4",
+        "text": "Felizes são os que choram, porque serão consolados.",
+        "wordCount": 8,
+        "youversionUrl": "https://www.bible.com/pt/bible/1966/MAT.5.4"
+      },
+      "NAA": {
+        "reference": "Mateus 5:4",
+        "text": "— Bem-aventurados os que choram, porque serão consolados.",
+        "wordCount": 8,
+        "youversionUrl": "https://www.bible.com/pt/bible/1840/MAT.5.4.NAA"
+      }
+    },
+    "Mt 5:8": {
+      "NVI": {
+        "reference": "Mateus 5:8",
+        "text": "Bem-aventurados os puros de coração, pois verão a Deus.",
+        "wordCount": 10,
+        "youversionUrl": "https://www.bible.com/pt/bible/129/MAT.5.8"
+      },
+      "NBV": {
+        "reference": "Mateus 5:8",
+        "text": "Felizes os que têm um coração puro, porque verão a Deus.",
+        "wordCount": 11,
+        "youversionUrl": "https://www.bible.com/pt/bible/1966/MAT.5.8"
+      }
+    },
+    "2Co 5:20": {
+      "NVI": {
+        "reference": "2Coríntios 5:20",
+        "text": "Portanto, somos embaixadores de Cristo, e Deus faz seu apelo por meio de nós. Por amor a Cristo, suplicamos: reconciliem‑se com Deus.",
+        "wordCount": 23,
+        "youversionUrl": "https://www.bible.com/pt/bible/129/2CO.5.20"
+      },
+      "NBV": {
+        "reference": "2 Coríntios 5:20",
+        "text": "Somos embaixadores de Cristo. Deus nos está usando para falar a vocês. Nós lhes imploramos, como se o próprio Cristo estivesse aqui suplicando a vocês: Aceitem o amor que ele lhes oferece — reconciliem-se com Deus.",
+        "wordCount": 36,
+        "youversionUrl": "https://www.bible.com/pt/bible/1966/2CO.5.20"
+      },
+      "Manual": {
+        "reference": "2Coríntios 5:20",
+        "text": "De sorte que somos embaixadores por Cristo, como se Deus por nós vos exortasse. Rogamo-vos, pois, por Cristo que vos reconcilieis com Deus.",
         "wordCount": 24,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/PSA.32.9"
-      },
-      "NBV": {
-        "reference": "Salmos 32:9",
-        "text": "Não seja teimoso como um cavalo ou uma mula que não tem entendimento; eles precisam de rédeas e freio para andarem pelo caminho certo.",
-        "wordCount": 24,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/PSA.32.9"
+        "youversionUrl": ""
       }
     },
-    "Gn 1:3": {
+    "Mt 10:32": {
       "NVI": {
-        "reference": "Gênesis 1:3",
-        "text": "Deus disse: ― Haja luz. E houve luz.",
-        "wordCount": 7,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/GEN.1.3"
+        "reference": "Mateus 10:32",
+        "text": "― Todo aquele que me confessar diante dos homens, também eu o confessarei diante do meu Pai, que está nos céus.",
+        "wordCount": 20,
+        "youversionUrl": "https://www.bible.com/pt/bible/129/MAT.10.32"
       },
       "NBV": {
-        "reference": "Gênesis 1:3",
-        "text": "Deus disse: “Haja luz”, e houve luz.",
-        "wordCount": 7,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/GEN.1.3"
-      }
-    },
-    "Ex 20:13": {
-      "NVI": {
-        "reference": "Êxodo 20:13",
-        "text": "Não assassine.",
-        "wordCount": 2,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/EXO.20.13"
-      },
-      "NBV": {
-        "reference": "Êxodo 20:13",
-        "text": "“Não mate.",
-        "wordCount": 2,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/EXO.20.13"
-      }
-    },
-    "Ex 20:14": {
-      "NVI": {
-        "reference": "Êxodo 20:14",
-        "text": "Não adultere.",
-        "wordCount": 2,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/EXO.20.14"
-      },
-      "NBV": {
-        "reference": "Êxodo 20:14",
-        "text": "“Não pratique adultério.",
-        "wordCount": 3,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/EXO.20.14"
-      }
-    },
-    "Ex 20:15": {
-      "NVI": {
-        "reference": "Êxodo 20:15",
-        "text": "Não furte.",
-        "wordCount": 2,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/EXO.20.15"
-      },
-      "NBV": {
-        "reference": "Êxodo 20:15",
-        "text": "“Não roube.",
-        "wordCount": 2,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/EXO.20.15"
-      }
-    },
-    "Ex 20:16": {
-      "NVI": {
-        "reference": "Êxodo 20:16",
-        "text": "Não dê falso testemunho contra o seu próximo.",
-        "wordCount": 8,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/EXO.20.16"
-      },
-      "NBV": {
-        "reference": "Êxodo 20:16",
-        "text": "“Não dê falso testemunho contra o seu próximo.",
-        "wordCount": 8,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/EXO.20.16"
-      }
-    },
-    "Jo 6:48": {
-      "NVI": {
-        "reference": "João 6:48",
-        "text": "Eu sou o pão da vida.",
-        "wordCount": 6,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/JHN.6.48"
-      },
-      "NBV": {
-        "reference": "João 6:48",
-        "text": "Sim, eu sou o pão da vida!",
-        "wordCount": 7,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/JHN.6.48"
-      }
-    },
-    "Jo 8:1": {
-      "NVI": {
-        "reference": "João 8:1",
-        "text": "Jesus, porém, foi para o monte das Oliveiras.",
-        "wordCount": 8,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/JHN.8.1"
-      },
-      "NBV": {
-        "reference": "João 8:1",
-        "text": "Jesus, porém, voltou para o monte das Oliveiras.",
-        "wordCount": 8,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/JHN.8.1"
-      }
-    },
-    "1Ts 5:16": {
-      "NVI": {
-        "reference": "1Tessalonicenses 5:16",
-        "text": "Alegrem‑se sempre.",
-        "wordCount": 3,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/1TH.5.16"
-      },
-      "NBV": {
-        "reference": "1 Tessalonicenses 5:16",
-        "text": "Estejam sempre alegres.",
-        "wordCount": 3,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/1TH.5.16"
-      }
-    },
-    "1Ts 5:17": {
-      "NVI": {
-        "reference": "1Tessalonicenses 5:17",
-        "text": "Orem constantemente.",
-        "wordCount": 2,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/1TH.5.17"
-      },
-      "NBV": {
-        "reference": "1 Tessalonicenses 5:17",
-        "text": "Permaneçam sempre em oração.",
-        "wordCount": 4,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/1TH.5.17"
-      }
-    },
-    "1Ts 5:18": {
-      "NVI": {
-        "reference": "1Tessalonicenses 5:18",
-        "text": "Deem graças em todas as circunstâncias, pois esta é a vontade de Deus para vocês em Cristo Jesus.",
+        "reference": "Mateus 10:32",
+        "text": "“Se alguém me reconhecer em público, eu o reconhecerei abertamente diante do meu Pai que está nos céus.",
         "wordCount": 18,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/1TH.5.18"
+        "youversionUrl": "https://www.bible.com/pt/bible/1966/MAT.10.32"
       },
-      "NBV": {
-        "reference": "1 Tessalonicenses 5:18",
-        "text": "Estejam sempre agradecidos, haja o que houver, porque esta é a vontade de Deus para com vocês que pertencem a Cristo Jesus.",
-        "wordCount": 22,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/1TH.5.18"
+      "ARC": {
+        "reference": "Mateus 10:32",
+        "text": "Portanto, qualquer que me confessar diante dos homens, eu o confessarei diante de meu Pai, que está nos céus.",
+        "wordCount": 19,
+        "youversionUrl": "https://www.bible.com/pt/bible/212/MAT.10.32.ARC"
       }
     },
-    "1Ts 5:19": {
+    "Mt 10:33": {
       "NVI": {
-        "reference": "1Tessalonicenses 5:19",
-        "text": "Não apaguem o Espírito.",
-        "wordCount": 4,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/1TH.5.19"
+        "reference": "Mateus 10:33",
+        "text": "Mas aquele que me negar diante dos homens, também eu o negarei diante do meu Pai, que está nos céus.",
+        "wordCount": 20,
+        "youversionUrl": "https://www.bible.com/pt/bible/129/MAT.10.33"
       },
       "NBV": {
-        "reference": "1 Tessalonicenses 5:19",
-        "text": "Não abafem o Espírito Santo.",
-        "wordCount": 5,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/1TH.5.19"
-      }
-    },
-    "Jo 6:4": {
-      "NVI": {
-        "reference": "João 6:4",
-        "text": "Estava próxima a festa judaica da Páscoa.",
-        "wordCount": 7,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/JHN.6.4"
+        "reference": "Mateus 10:33",
+        "text": "Mas se alguém me negar em público, eu o negarei abertamente diante do meu Pai que está nos céus.",
+        "wordCount": 19,
+        "youversionUrl": "https://www.bible.com/pt/bible/1966/MAT.10.33"
       },
-      "NBV": {
-        "reference": "João 6:4",
-        "text": "Estava próximo da comemoração anual da Páscoa.",
-        "wordCount": 7,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/JHN.6.4"
-      }
-    },
-    "Jo 8:12": {
-      "NVI": {
-        "reference": "João 8:12",
-        "text": "Falando novamente ao povo, Jesus disse: ― Eu sou a luz do mundo. Quem me segue nunca andará em trevas, mas terá a luz da vida.",
-        "wordCount": 25,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/JHN.8.12"
-      },
-      "NBV": {
-        "reference": "João 8:12",
-        "text": "Depois, em um de seus ensinos, Jesus disse ao povo: “Eu sou a luz do mundo. Se vocês me seguirem, não vão tropeçar na escuridão, mas terão a luz da vida”.",
-        "wordCount": 31,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/JHN.8.12"
-      }
-    },
-    "Mt 6:6": {
-      "NVI": {
-        "reference": "Mateus 6:6",
-        "text": "Mas, quando você orar, vá para o seu quarto, feche a porta e ore ao seu Pai, que está em secreto. Então, o seu Pai, que vê em secreto, o recompensará.",
-        "wordCount": 31,
-        "youversionUrl": "https://www.bible.com/pt/bible/129/MAT.6.6"
-      },
-      "NBV": {
-        "reference": "Mateus 6:6",
-        "text": "Mas você, quando orar, vá para o seu quarto, feche a porta atrás de você, e ore ao seu Pai que está em secreto; e seu Pai, que conhece os seus segredos, recompensará você.",
-        "wordCount": 34,
-        "youversionUrl": "https://www.bible.com/pt/bible/1966/MAT.6.6"
+      "ARC": {
+        "reference": "Mateus 10:33",
+        "text": "Mas qualquer que me negar diante dos homens, eu o negarei também diante de meu Pai, que está nos céus.",
+        "wordCount": 20,
+        "youversionUrl": "https://www.bible.com/pt/bible/212/MAT.10.33.ARC"
       }
     }
   }

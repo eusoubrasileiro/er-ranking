@@ -1,4 +1,4 @@
-import { Trophy, Plus, Church, Crown, UserPlus, BookOpen, BadgeCheck, HelpCircle, AlertTriangle, FileText, Bed, UtensilsCrossed, Bath, Trees, Star, Heart } from 'lucide-react';
+import { Trophy, Plus, Church, Crown, UserPlus, BookOpen, BadgeCheck, GraduationCap, Medal, PenLine, HelpCircle, AlertTriangle, FileText, Bed, UtensilsCrossed, Bath, Trees, Star, Heart } from 'lucide-react';
 import type { Rule } from '@/hooks/useLeaderboardData';
 import type { LucideIcon } from 'lucide-react';
 import {
@@ -20,6 +20,9 @@ export function RulesSection({ rules }: RulesSectionProps) {
     UserPlus,
     BookOpen,
     BadgeCheck,
+    GraduationCap,
+    Medal,
+    PenLine,
     AlertTriangle,
     FileText,
     // Family chores icons
@@ -77,7 +80,7 @@ export function RulesSection({ rules }: RulesSectionProps) {
                       ? 'bg-destructive/20 text-destructive'
                       : 'bg-accent text-accent-foreground'
                   }`}>
-                    {rule.points < 0 ? rule.points : `+${rule.points}`}
+                    {rule.display ?? (rule.points < 0 ? rule.points : `+${rule.points}`)}
                   </div>
                 </div>
               );

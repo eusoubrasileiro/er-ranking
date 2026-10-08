@@ -3,11 +3,13 @@
     { "id": 1, "description": "Participar Compromissos da Igreja", "points": 10, "icon": "Church", "activityType": "igreja", "explanation": "Beneficia a participacao de pessoas nao cristas e nao-membros da igreja." },
     { "id": 2, "description": "Participar da Embaixada", "points": 10, "icon": "Crown", "activityType": "embaixada" },
     { "id": 3, "description": "Trazer visitante", "points": 25, "icon": "UserPlus", "explanation": "No culto: Foco em nao cristaos ou desviados. Embaixada: qualquer visitante." },
-    { "id": 4, "description": "Decorar versiculo (<20 palavras)", "points": 25, "icon": "BookOpen", "explanation": "Aceita-se trocar uma palavra por outra com mesmo significado desde que saiba referencia" },
-    { "id": 5, "description": "Decorar versiculo (>=20 palavras)", "points": 35, "icon": "BookOpen", "explanation": "Aceita-se trocar uma palavra por outra com mesmo significado desde que saiba referencia" },
-    { "id": 6, "description": "Pre-requisitos Candidato", "points": 55, "icon": "BadgeCheck" },
-    { "id": 7, "description": "Tarefa Manual Candidato", "points": 55, "icon": "BadgeCheck" },
-    { "id": 8, "description": "Disciplina", "points": -10, "icon": "AlertTriangle", "explanation": "Cristaos da igreja: -10pts | Nao cristaos: -5pts | Cristaos de fora: -7pts" },
-    { "id": 9, "description": "Anotacao de Pregacao", "points": 30, "icon": "FileText", "explanation": "Ate 30pts proporcional a qualidade e idade. Avaliado pelo lider." }
+    { "id": 4, "description": "Decorar versiculo (<20 palavras)", "points": 25, "icon": "BookOpen", "explanation": "Regra nacional: texto exato, palavra por palavra, dito em voz alta com a referencia e sem dicas. A versao da Biblia fica registrada e os pontos seguem o texto dessa versao." },
+    { "id": 5, "description": "Decorar versiculo (>=20 palavras)", "points": 35, "icon": "BookOpen", "explanation": "Regra nacional: texto exato, palavra por palavra, dito em voz alta com a referencia e sem dicas. A versao da Biblia fica registrada e os pontos seguem o texto dessa versao." },
+    { "id": 6, "description": "Versiculo do Manual", "points": 2, "display": "2×", "icon": "GraduationCap", "explanation": "Versiculos obrigatorios das tarefas do Manual do Candidato valem o dobro. Ex.: Jo 3:16 = 70 pts." },
+    { "id": 7, "description": "Desafio do Manual", "points": 3, "display": "3×", "icon": "Medal", "explanation": "Versiculo desafio da tarefa (opcional) vale o triplo. Ex.: Mt 10:32-33 = 75 + 105 pts." },
+    { "id": 8, "description": "Prova escrita da tarefa", "points": 50, "display": "ate 50", "icon": "PenLine", "explanation": "Nota x 5 (nota 10 = 50 pts). Aprovado com nota 7. Uma recuperacao; vale a maior nota." },
+    { "id": 9, "description": "Tema, Compromisso e Hino", "points": 55, "icon": "BadgeCheck", "explanation": "Tarefa 1: dizer o Tema e o refrao do Hino de cor e o Compromisso (minimo 3 promessas, explicar 1)." },
+    { "id": 10, "description": "Disciplina", "points": -10, "icon": "AlertTriangle", "explanation": "Cristaos da igreja: -10pts | Nao cristaos: -5pts | Cristaos de fora: -7pts" },
+    { "id": 11, "description": "Anotacao de Pregacao", "points": 30, "icon": "FileText", "explanation": "Ate 30pts proporcional a qualidade e idade. Avaliado pelo lider." }
   ]
 }

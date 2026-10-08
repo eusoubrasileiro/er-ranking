@@ -237,6 +237,22 @@ async function main() {
     }
   });
 
+  // Manual do Candidato lesson verses (shown on the Manual page even before anyone recites them)
+  const lessonsPath = path.join(__dirname, '..', 'public', 'data', 'lessons.json');
+  if (fs.existsSync(lessonsPath)) {
+    const lessonsData = JSON.parse(fs.readFileSync(lessonsPath, 'utf-8'));
+    lessonsData.lessons.forEach(lesson => {
+      [...(lesson.verses ?? []), ...(lesson.challenge ?? [])].forEach(v => originalRefs.add(v.ref));
+    });
+  }
+
+  // Hand-entered texts for versions the API does not serve (ARC, ARA, NAA, Manual)
+  const verseTextsPath = path.join(__dirname, '..', 'public', 'data', 'verse-texts.json');
+  const verseTexts = fs.existsSync(verseTextsPath)
+    ? JSON.parse(fs.readFileSync(verseTextsPath, 'utf-8'))
+    : { versions: {}, verses: {} };
+  Object.keys(verseTexts.verses).forEach(ref => originalRefs.add(ref));
+
   // Expand all ranges into individual verses
   const allRefs = new Set();
   for (const ref of originalRefs) {
@@ -298,6 +314,27 @@ async function main() {
       }
       // Small delay to avoid rate limiting
       await new Promise(resolve => setTimeout(resolve, 150));
+    }
+  }
+
+  // Merge hand-entered texts (word count computed the same way as API texts)
+  console.log('\n✍️  Merging hand-entered texts...\n');
+  for (const [abbr, info] of Object.entries(verseTexts.versions)) {
+    bibleVersions[abbr] = { id: info.id ?? 0, name: info.name, fullTitle: info.name };
+  }
+  for (const [ref, byVersion] of Object.entries(verseTexts.verses)) {
+    const usfmRef = parseReference(ref);
+    verses[ref] = verses[ref] ?? {};
+    for (const [abbr, text] of Object.entries(byVersion)) {
+      const id = verseTexts.versions[abbr]?.id;
+      const cleanText = cleanVerseText(text);
+      verses[ref][abbr] = {
+        reference: verses[ref].NVI?.reference ?? ref,
+        text: cleanText,
+        wordCount: countWords(cleanText),
+        youversionUrl: id && usfmRef ? `https://www.bible.com/pt/bible/${id}/${usfmRef}.${abbr}` : ''
+      };
+      console.log(`  ✅ ${ref} ${abbr}`);
     }
   }
 
