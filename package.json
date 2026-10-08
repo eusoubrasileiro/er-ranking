@@ -7,7 +7,7 @@
     "setup-config": "node scripts/setup-config.js",
     "dev": "APP_CONFIG=royal-ambassadors npm run setup-config && vite",
     "fetch-verses": "node scripts/fetch-verses.js",
-    "build:er": "APP_CONFIG=royal-ambassadors npm run setup-config && npm run fetch-verses && vite build",
+    "build:er": "APP_CONFIG=royal-ambassadors npm run setup-config && npm run fetch-verses && vite build && cp dist/index.html dist/404.html",
     "build": "npm run build:er",
     "build:dev": "npm run fetch-verses && vite build --mode development",
     "lint": "eslint .",
