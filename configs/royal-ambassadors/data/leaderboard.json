@@ -1,8 +1,8 @@
 {
   "season": "2026/2",
   "seasonStart": "2026-09-27",
-  "updatedAt": "2026-10-08T15:00:00.000Z",
-  "pointsAsOf": "2026-10-04T00:00:00.000Z",
+  "updatedAt": "2026-10-11T12:00:00.000Z",
+  "pointsAsOf": "2026-10-11T00:00:00.000Z",
   "participants": [
     {
       "id": 1,
@@ -90,6 +90,11 @@
           "date": "2026-10-04",
           "type": "igreja",
           "addedAt": "2026-10-04T12:00:00.000Z"
+        },
+        {
+          "date": "2026-10-11",
+          "type": "igreja",
+          "addedAt": "2026-10-11T12:00:00.000Z"
         }
       ],
       "visitors": [
@@ -177,6 +182,21 @@
           "date": "2026-10-04",
           "type": "igreja",
           "addedAt": "2026-10-04T12:00:00.000Z"
+        },
+        {
+          "date": "2026-10-11",
+          "type": "igreja",
+          "addedAt": "2026-10-11T12:00:00.000Z"
+        },
+        {
+          "date": "2026-10-11",
+          "type": "embaixada",
+          "addedAt": "2026-10-11T12:00:00.000Z"
+        },
+        {
+          "date": "2026-10-11",
+          "type": "igreja",
+          "addedAt": "2026-10-11T12:00:00.000Z"
         }
       ],
       "visitors": [],
@@ -274,7 +294,18 @@
       "id": 4,
       "name": "Miguel",
       "memorizedVerses": [],
-      "attendance": [],
+      "attendance": [
+        {
+          "date": "2026-10-11",
+          "type": "igreja",
+          "addedAt": "2026-10-11T12:00:00.000Z"
+        },
+        {
+          "date": "2026-10-11",
+          "type": "embaixada",
+          "addedAt": "2026-10-11T12:00:00.000Z"
+        }
+      ],
       "visitors": [],
       "exams": [],
       "lessonItems": []
