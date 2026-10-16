@@ -200,7 +200,14 @@
         }
       ],
       "visitors": [],
-      "exams": [],
+      "exams": [
+        {
+          "lesson": 1,
+          "grade": 10,
+          "date": "2026-10-11",
+          "addedAt": "2026-10-11T12:00:00.000Z"
+        }
+      ],
       "lessonItems": []
     },
     {
@@ -293,7 +300,24 @@
     {
       "id": 4,
       "name": "Miguel",
-      "memorizedVerses": [],
+      "memorizedVerses": [
+        {
+          "ref": "Jo 3:16",
+          "version": "ARA",
+          "addedAt": "2026-10-11T12:00:00.000Z"
+        },
+        {
+          "ref": "Gn 1:1",
+          "version": "ARA",
+          "addedAt": "2026-10-11T12:00:00.000Z"
+        },
+        {
+          "ref": "Jó 3:2",
+          "version": "NVI",
+          "versionPending": true,
+          "addedAt": "2026-10-11T12:00:00.000Z"
+        }
+      ],
       "attendance": [
         {
           "date": "2026-10-11",
@@ -307,7 +331,14 @@
         }
       ],
       "visitors": [],
-      "exams": [],
+      "exams": [
+        {
+          "lesson": 1,
+          "grade": 9,
+          "date": "2026-10-11",
+          "addedAt": "2026-10-11T12:00:00.000Z"
+        }
+      ],
       "lessonItems": []
     }
   ]

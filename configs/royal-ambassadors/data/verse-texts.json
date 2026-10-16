@@ -45,7 +45,8 @@
       "ARA": "Em verdade também vos digo que, se dois dentre vós, sobre a terra, concordarem a respeito de qualquer coisa que, porventura, pedirem, ser-lhes-á concedida por meu Pai, que está nos céus."
     },
     "Gn 1:1": {
-      "NAA": "No princípio, Deus criou os céus e a terra."
+      "NAA": "No princípio, Deus criou os céus e a terra.",
+      "ARA": "No princípio, criou Deus os céus e a terra."
     },
     "Sl 23:1": {
       "NAA": "O SENHOR é o meu pastor; nada me faltará."
@@ -55,6 +56,9 @@
     },
     "Mt 5:5": {
       "NAA": "— Bem-aventurados os mansos, porque herdarão a terra."
+    },
+    "Jó 3:2": {
+      "ARA": "Disse Jó:"
     }
   }
 }

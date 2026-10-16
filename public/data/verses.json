@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T19:14:28.862Z",
+  "generatedAt": "2026-10-16T13:11:59.240Z",
   "defaultVersion": "NVI",
   "versions": {
     "NVI": {
@@ -228,6 +228,12 @@
         "text": "No princípio, Deus criou os céus e a terra.",
         "wordCount": 9,
         "youversionUrl": "https://www.bible.com/pt/bible/1840/GEN.1.1.NAA"
+      },
+      "ARA": {
+        "reference": "Gênesis 1:1",
+        "text": "No princípio, criou Deus os céus e a terra.",
+        "wordCount": 9,
+        "youversionUrl": "https://www.bible.com/pt/bible/1608/GEN.1.1.ARA"
       }
     },
     "Jó 3:2": {
@@ -242,6 +248,12 @@
         "text": "Jó disse:",
         "wordCount": 2,
         "youversionUrl": "https://www.bible.com/pt/bible/1966/JOB.3.2"
+      },
+      "ARA": {
+        "reference": "Jó 3:2",
+        "text": "Disse Jó:",
+        "wordCount": 2,
+        "youversionUrl": "https://www.bible.com/pt/bible/1608/JOB.3.2.ARA"
       }
     },
     "Sl 119:103": {
