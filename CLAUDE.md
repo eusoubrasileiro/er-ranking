@@ -342,6 +342,13 @@ Insert routes in `src/App.tsx` BEFORE the `<Route path="*" element={<NotFound />
 
 No admin panel. Claude edits the JSON in `configs/royal-ambassadors/data/` from Andre's notes.
 
+### Age leagues and the exam age correction
+The national organization (and its camps) splits boys into age leagues: **Alfa 9–11**, **Delta 12–14**,
+**Ômega 15–17**. This embassy is small, so all ages compete in one ranking. To keep that fair, Andre may
+add an **age correction to a younger boy's exam grade** (e.g. +2 for an 8-year-old against boys of 13+ on the
+T1 exam, 11/10/2026), capped at `maxGrade` 10. Andre decides it case by case; record only the **final grade**
+he gives. Don't put the boys' ages in the repo (it is public).
+
 ### Verse Reference Format
 Use Portuguese abbreviations: `Jo` (John), `Sl` (Psalms), `1Co` (1 Corinthians), etc.
 - Examples: `Jo 3:16`, `Sl 23:1-6`, `1Co 13:4-8`, `Gn 1:1`
