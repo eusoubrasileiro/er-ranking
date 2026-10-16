@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T13:11:59.240Z",
+  "generatedAt": "2026-10-16T17:42:28.567Z",
   "defaultVersion": "NVI",
   "versions": {
     "NVI": {
@@ -180,6 +180,18 @@
         "text": "Portanto, ide, ensinai todas as nações, batizando-as em nome do Pai, e do Filho, e do Espírito Santo",
         "wordCount": 19,
         "youversionUrl": "https://www.bible.com/pt/bible/212/MAT.28.19.ARC"
+      },
+      "Manual": {
+        "reference": "Mateus 28:19",
+        "text": "Portanto, ide, fazei discípulos de todas as nações, batizando-os em nome do Pai, do Filho e do Espírito Santo,",
+        "wordCount": 20,
+        "youversionUrl": ""
+      },
+      "ARA": {
+        "reference": "Mateus 28:19",
+        "text": "Ide, portanto, fazei discípulos de todas as nações, batizando-os em nome do Pai, e do Filho, e do Espírito Santo;",
+        "wordCount": 21,
+        "youversionUrl": "https://www.bible.com/pt/bible/1608/MAT.28.19.ARA"
       }
     },
     "Jó 22:1": {
@@ -408,6 +420,72 @@
         "text": "Mas qualquer que me negar diante dos homens, eu o negarei também diante de meu Pai, que está nos céus.",
         "wordCount": 20,
         "youversionUrl": "https://www.bible.com/pt/bible/212/MAT.10.33.ARC"
+      }
+    },
+    "Mt 28:20": {
+      "NVI": {
+        "reference": "Mateus 28:20",
+        "text": "ensinando‑os a obedecer a tudo o que eu ordenei a vocês. E eu estarei sempre com vocês, até o fim dos tempos.",
+        "wordCount": 23,
+        "youversionUrl": "https://www.bible.com/pt/bible/129/MAT.28.20"
+      },
+      "NBV": {
+        "reference": "Mateus 28:20",
+        "text": "e ensinando esses novos discípulos a obedecerem a todas as ordens que eu lhes dei. E tenham certeza disto: Eu estarei sempre com vocês, até o fim dos tempos”.",
+        "wordCount": 29,
+        "youversionUrl": "https://www.bible.com/pt/bible/1966/MAT.28.20"
+      },
+      "Manual": {
+        "reference": "Mateus 28:20",
+        "text": "ensinando-os a observar todas as coisas que eu vos tenho mandado; e eis que eu estou convosco todos os dias, até a consumação dos séculos.",
+        "wordCount": 26,
+        "youversionUrl": ""
+      },
+      "ARA": {
+        "reference": "Mateus 28:20",
+        "text": "ensinando-os a guardar todas as coisas que vos tenho ordenado. E eis que estou convosco todos os dias até à consumação do século.",
+        "wordCount": 24,
+        "youversionUrl": "https://www.bible.com/pt/bible/1608/MAT.28.20.ARA"
+      }
+    },
+    "Ef 6:16": {
+      "NVI": {
+        "reference": "Efésios 6:16",
+        "text": "Além disso, usem o escudo da fé, com o qual vocês poderão apagar todas as setas inflamadas do Maligno.",
+        "wordCount": 19,
+        "youversionUrl": "https://www.bible.com/pt/bible/129/EPH.6.16"
+      },
+      "NBV": {
+        "reference": "Efésios 6:16",
+        "text": "Em cada batalha vocês precisarão da fé como escudo para deter as setas ardentes disparadas pelo Maligno contra vocês.",
+        "wordCount": 19,
+        "youversionUrl": "https://www.bible.com/pt/bible/1966/EPH.6.16"
+      },
+      "ARA": {
+        "reference": "Efésios 6:16",
+        "text": "embraçando sempre o escudo da fé, com o qual podereis apagar todos os dardos inflamados do Maligno.",
+        "wordCount": 17,
+        "youversionUrl": "https://www.bible.com/pt/bible/1608/EPH.6.16.ARA"
+      }
+    },
+    "1Tm 4:12": {
+      "NVI": {
+        "reference": "1Timóteo 4:12",
+        "text": "Ninguém o despreze pelo fato de você ser jovem, mas seja um exemplo para os fiéis na palavra, no procedimento, no amor, na fé e na pureza.",
+        "wordCount": 27,
+        "youversionUrl": "https://www.bible.com/pt/bible/129/1TI.4.12"
+      },
+      "NBV": {
+        "reference": "1 Timóteo 4:12",
+        "text": "Ninguém faça pouco caso de você porque você ainda é moço. Seja exemplo para eles, para que sigam o caminho que você ensina e vive; seja modelo para eles no amor, na fé e na pureza.",
+        "wordCount": 36,
+        "youversionUrl": "https://www.bible.com/pt/bible/1966/1TI.4.12"
+      },
+      "ARA": {
+        "reference": "1Timóteo 4:12",
+        "text": "Ninguém despreze a tua mocidade; pelo contrário, torna-te padrão dos fiéis, na palavra, no procedimento, no amor, na fé, na pureza.",
+        "wordCount": 22,
+        "youversionUrl": "https://www.bible.com/pt/bible/1608/1TI.4.12.ARA"
       }
     }
   }

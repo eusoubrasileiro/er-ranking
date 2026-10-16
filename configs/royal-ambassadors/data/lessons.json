@@ -61,21 +61,45 @@
       "id": 3,
       "title": "Declaração dos ER",
       "short": "Declaração",
-      "verses": [],
+      "verses": [
+        {
+          "ref": "Mt 28:19-20",
+          "version": "Manual"
+        }
+      ],
       "challenge": [],
-      "items": [],
-      "exam": true,
-      "note": "Versículos a definir"
+      "items": [
+        {
+          "id": "declaracao",
+          "label": "Declaração dos ER de cor",
+          "points": 25
+        }
+      ],
+      "exam": true
     },
     {
       "id": 4,
       "title": "Insígnia",
       "short": "Insígnia",
-      "verses": [],
+      "verses": [
+        {
+          "ref": "Ef 6:16",
+          "version": "ARA"
+        },
+        {
+          "ref": "1Tm 4:12",
+          "version": "ARA"
+        }
+      ],
       "challenge": [],
-      "items": [],
-      "exam": true,
-      "note": "Requisitos a definir"
+      "items": [
+        {
+          "id": "escudo-cores",
+          "label": "Escudo de cor e significado das cores",
+          "points": 55
+        }
+      ],
+      "exam": true
     },
     {
       "id": 5,
